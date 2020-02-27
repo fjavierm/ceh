@@ -93,4 +93,4 @@ If we execute the Search Web by Domain tool, we can see the next result:
 
 ![Tesla Netcraft](img/001_netcraft_tesla.png)
 
-### Collecting cocation information
+### Collecting location information
