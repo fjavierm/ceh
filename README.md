@@ -1,6 +1,6 @@
 # CEH v10 - Certified Ethical Hacker
 
-# 0. Disclaimer
+## 0. Disclaimer
 
 This disclaimer is mainly designed to cover the content explained in this document Ethical Hacking.
 
