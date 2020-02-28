@@ -57,7 +57,7 @@ This is the first phase of an ethical hacking test. The person performing the te
 Possible sources of information or techniques can be:
 
 * Publicly available information like social networks, newspapers or enterprise online resources like webpages.
-* Employees' social and/or professional networks.
+* Employees' social and or professional networks.
 * Social engineering.
 * Search engines.
 * WHOIS and DNS registers.
@@ -93,4 +93,88 @@ If we execute the Search Web by Domain tool, we can see the next result:
 
 ![Tesla Netcraft](img/001_netcraft_tesla.png)
 
+Another very interesting tool is worth it to mention is [Shodan](https://www.shodan.io). As they describe themselves, Shodan is the world's first search engine for Internet-connected devices. It can give infrastructure information, even available ports, a lot of very useful information.
+
 ### Collecting location information
+
+Obvious tools to find information about a company and its surrounding without the need to go to their location or locations are map tools like [Google Maps](https://www.google.com/maps) or [Bing Maps](https://www.bing.com/maps). But, in general, any other map or location service it will do it.
+
+The reason to do this is not just in case a physical test needs to be done, all the gathered information about the surrounding can be used for social engineering attacks.
+
+### People Search Online Services
+
+As has been mentioned before, the more information it is gathered the better. Part of this important information is the one around employees of a company. Nowadays, multiple online services are offering the possibility of identifying phone numbers, address and people.
+
+Some of them are paid services but with a few searches, free ones can be found.
+
+### Gather Information from Financial Services
+
+Some search engines can provide financial information about a target. And not just its financial information, they can provide a list of competitors and or some information about its competitors.
+
+* [Google Finance](https://www.google.com/finance)
+* [Yahoo Finance](https://finance.yahoo.com)
+
+### Job Sites
+
+Job sites can be a true gold mine, they are going to offer us not only information about employees, positions, curriculums and relations but, if close attention is paid to the job descriptions and or job offers, a huge amount of information can also be gathered i.e. departments,  technologies or software.
+
+A different approach can be followed creating, for example, a fake job position to target a specific person and collect their personal information.
+
+* [Linkedin](https://www.linkedin.com)
+* [Monster](https://www.monster.co.uk)
+
+### Monitoring Targets Using Alerts
+
+Same services names in the above paragraphs can be used to set alerts or subscribe to feeds about a target to receive the latest update and information about it.
+
+* [Google Alerts](https://www.google.co.uk/alerts)
+
+### Information Gathering Using Groups, Forums and Blogs
+
+All these elements can leak sensitive information and it can allow attackers with a fake profile to reach and interact with the companies and or the people working there, it does not matter if there are official or non-official channels, information can be leaked in either.
+
+### Google Advanced Search (Google Hacking)
+
+Everyone knows the Google search engine, everyone uses it and know its basic functionality but, what not everyone knows, it is that the search engine offers some specific operators that can help to refine and focus the search operations, making the results more relevant. Some of the operators are:
+
+* `site:`: Search for the results in a given domain.
+* `related:`: Search for similar websites.
+* `cache:`: Display the webpages stored in the cache.
+* `link:`: Link all the websites having a link to a specific website.
+* `allintext:`: Search for websites containing a specific keyword.
+* `intext:`: Search for documents containing a specific keyword.
+* `allintitle:`: Search for websites containing a specific keyword in the title.
+* `intitle:`: Search for documents containing a specific keyword in the title.
+* `allinurl:`: Search for websites containing a specific keyword in the URL.
+* `inurl:`: Search for documents containing a specific keyword in the URL.
+
+If we do not like to type all these operators, we can use the [Google Advanced Search Webpage](https://www.google.com/advanced_search).
+
+### Google Hacking Database (GHDB)
+
+Google Hacking or Google Dorking is a combination of hacking techniques that allow finding security holes within an organisation's network and systems using the Google search engine and or other applications powered by Google. Whit endless combinations of operators and endless use cases a database categorising possible queries has been created and, it is well known as [GHDB](https://www.exploit-db.com/google-hacking-database).
+
+![GHDB Webpage](img/002_ghdb.png)
+
+### Social Networking Sites
+
+In the old days, attackers needed to be creative to obtain people information, nowadays, people just throw their information online and an attacker just needs to go there to collect it. The places where the information and the attackers meet are social networks. There are tons of useful information waiting to be collected that can easily be used to focus attacks or social engineering attacks.
+
+The Social engineering term refers to a technique of psychological manipulation to gather information from different social interactions online or offline. And, it has proven to be an invaluable source of information. In the end, it what is said, the human is, sometimes, the weakest link in the security chain.
+
+Some of the information that can be found in social networks can correlate to the information an attacker is looking for:
+
+| Social network user action | Information |
+|:-|:-|
+| People maintain their profile | Photo of the target |
+| | Contact numbers |
+| | Email addresses |
+| | Date of birthday |
+| | Location |
+| | Work details |
+| People update their status | Most recent personal information |
+| | Most recent location |
+| | Family and friends information |
+| | Activities and interests |
+| | Technology-related information |
+| | Upcoming events information |
