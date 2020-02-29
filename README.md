@@ -81,7 +81,7 @@ A step by step methodology can be:
 10. Social engineering.
 11. Document all findings.
 
-### Footprinting using search engines
+### Footprinting Using Search Engines
 
 Search engines are an amazing tool to find information about a target and, also, they allow to gather this information without having real contact with the target. Pages like Google or Bing allow to search for any information and find and collect it from every available place on the Internet. Information like office addresses, founders, employee names, employee information, partners, competitors, websites and much more. Also, sometimes a good resource is the cache information these search engines store.
 
@@ -95,7 +95,7 @@ If we execute the Search Web by Domain tool, we can see the next result:
 
 Another very interesting tool is worth it to mention is [Shodan](https://www.shodan.io). As they describe themselves, Shodan is the world's first search engine for Internet-connected devices. It can give infrastructure information, even available ports, a lot of very useful information.
 
-### Collecting location information
+### Collecting Location Information
 
 Obvious tools to find information about a company and its surrounding without the need to go to their location or locations are map tools like [Google Maps](https://www.google.com/maps) or [Bing Maps](https://www.bing.com/maps). But, in general, any other map or location service it will do it.
 
@@ -178,3 +178,118 @@ Some of the information that can be found in social networks can correlate to th
 | | Activities and interests |
 | | Technology-related information |
 | | Upcoming events information |
+
+### Website Footprinting
+
+#### Web Application Security Scanners
+
+Here, it is included the monitorisation and investigation of the target organisation websites. Attackers will try to obtain information like software running and their versions, operative systems, folder structures, databases information and, in general, any information that will be able to leverage in the next steps of the attack.
+
+Before, we have named the Netcraft tool but, there are other tools it can be used for these purposes. Here, just a couple of examples:
+
+* [Burp Suite](https://portswigger.net/burp): It is an open-source web application security scanner.
+* [Zaproxy](https://www.zaproxy.org): It is a graphical tool for testing Web application security. It intends to provide a comprehensive solution for web application security checks.
+
+As an example of how to use Burp Suite, we can check this video. As per the video description:
+
+> This burp suite guide will help you get your software setup and teach you a methodology that will lead you to success. Hacking tools are powerful but you must know how to properly use them to their full potential. Learn how to setup burp proxies and scanners, fuzzing, how to use Burp Intruder, what to target in a bounty's scope, and more.
+
+[![Introduction to Burp Suite](https://img.youtube.com/vi/h2duGBZLEek/0.jpg)](https://www.youtube.com/watch?v=h2duGBZLEek)
+
+#### Detecting the OS
+
+Some of the tools that have been already named as Netcraft and Shodan can be used to resolve this information with a simple query using their search engines.
+
+Worth saying that, if the only thing we want to find is a specific connected device such as routers, servers, IoT or other devices, this can be done using the Shodan search engine and its variety of filters.
+
+For example, a simple search of `D-Link` offers a long list of this kind of devices.
+
+![Shodan - D-Link search](img/003_shodan_d-link.png)
+
+#### Web Spiders or Web Crawlers
+
+Web spiders or web crawlers are automatic tools that surf and collect information from the Internet. They usually target a website and extract specific information like names, email addresses or any other information of this type.
+
+Nowadays, the business of Risk Management and Thread Intelligence is growing and companies in this space design the crawler to cover forums, leak information pages and communities, code repositories and much more. If it is out there, it can be crawled. But, any search engines crawl the Internet trying to index it.
+
+A good definition of what they are can be found [here](https://www.cloudflare.com/learning/bots/what-is-a-web-crawler/).
+
+There are a lot of options and even with a few lines of code, a basic one can be built. Different attackers can have different favourite ones or even the combination of multiple to fit their needs. A good exercise having some programming background is to take a look at the source code of a simple one.
+
+#### Mirroring a Website
+
+One option is to completely download a website for offline analysis, allowing attackers to analysis in an online environment the source code of a website and its structure.
+
+As in the previous case, there are a lot of options available with their pros and cons. Sometimes, one does the jobs, sometimes a combination of them is needed. Depends on personal preferences and use cases. some examples are:
+
+* [Octoparse](https://www.octoparse.com/)
+* [HTTrack](https://www.httrack.com/)
+* [Cyotek WebCopy ](https://www.cyotek.com/cyotek-webcopy)
+* [Getleft](https://sourceforge.net/projects/getleftdown/)
+* [GNU Wget](https://www.gnu.org/software/wget/)
+
+#### Web History
+
+Attackers can check how corporative webpages have changed trying to find some extra information. The page [Wayback Machine](http://web.archive.org) offers the possibility of, given a webpage domain, browse across its modifications and different versions. It is truly a curious exercise.
+
+#### Monitoring Web Updates
+
+When an attacker is planning to target a company is sometimes interesting to keep an eye on the changes they do to their websites. To do this manually is a tedious and not rewarding task, for this reason, there are some content monitoring tools. They help you track and monitor changes on any website under consideration so you can take immediate actions as you like.
+
+Some examples are:
+
+* [Wachete](https://www.wachete.com/)
+* [OnWebChange](https://onwebchange.com/)
+* [ChangeTower](https://changetower.com/)
+* [Visualping](https://visualping.io/)
+* [Versionista](https://versionista.com/)
+
+Again, there are multiple services and tools and attackers find the one that fits better to their purposes.
+
+#### Email Footprinting
+
+All business nowadays do extensive use of electronic communications, especially email communications, internally and externally. They contain tons of information, about the company i.e. financial information or technical information.
+
+Also, to all the information the body of the emails can give to an attacker, tracking the email communications can be very useful. The information listed below can be obtained using tracking tools:
+
+* Destination address.
+* Sender's IP address.
+* Sender's mail server.
+* Time and date information.
+* Authentication system information of sender's mail server.
+
+Tools like [PoliteMail](https://politemail.com) can help attackers to track Outlook messages. As we can see, not all the named tools are designed for hacking purposes but, the truth is that legitimate tools can be used for illegitimate purposes.
+
+Another interesting information that an attacker can find on email is the headers. Email headers can be explored manually but, some tools help attackers to trace hop by hop email communications and recover IP addresses.
+
+#### Competitive Intelligence
+
+At this point attackers are going to gather information and reports about the target competitors, they include legal news, press releases, financial information, analysis reports, and upcoming projects and plans. Attackers can identify:
+
+* When did the company begin?
+* Evolution of the company.
+* Authority of the company.
+* Background of an organisation.
+* Strategies and planning.
+* Financial statistics.
+* Other information.
+
+#### Monitoring Website Traffic
+
+Ranking of the target's website, geographical view of the users, number of total and segmented users, daily statistics, and much more are just a few examples of information that can be obtained. Some services can help us with this:
+
+* [Alexa](https://www.alexa.com/siteinfo)
+* [monitis](https://www.monitis.com)
+
+an example of what Alexa offers is:
+
+![Alexa - Tesla](img/004_alexa_tesla.png)
+
+#### Tracking Online Reputation
+
+Organisation's reputation can be tracked too using online reputation management tools (ORM). These tools are used to track reputation and rankings. It allows the attacker to study consumer opinions about target brands.
+
+One example of these tools can be [WhosTalking](https://www.whostalkinseo.com).
+
+#### Whois Footprinting
+
