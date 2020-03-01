@@ -160,8 +160,6 @@ Google Hacking or Google Dorking is a combination of hacking techniques that all
 
 In the old days, attackers needed to be creative to obtain people information, nowadays, people just throw their information online and an attacker just needs to go there to collect it. The places where the information and the attackers meet are social networks. There are tons of useful information waiting to be collected that can easily be used to focus attacks or social engineering attacks.
 
-The Social engineering term refers to a technique of psychological manipulation to gather information from different social interactions online or offline. And, it has proven to be an invaluable source of information. In the end, it what is said, the human is, sometimes, the weakest link in the security chain.
-
 Some of the information that can be found in social networks can correlate to the information an attacker is looking for:
 
 | Social network user action | Information |
@@ -293,3 +291,137 @@ One example of these tools can be [WhosTalking](https://www.whostalkinseo.com).
 
 #### Whois Footprinting
 
+WHOIS is a query and response protocol that is widely used for querying databases that store the registered users or assignees of an Internet resource, such as a domain name, an IP address block or an autonomous system. WHOIS lookups can help attackers to find out who is behind the target domain. WHOIS is maintained by the organisation Regional Internet Registries (RIR). All the registrations are divided into five regions:
+
+| RIR | Acronym | Locations |
+| :- | :- | :- |
+| African Network Information Centre | AFRINIC | Africa |
+| American Registry for Internet Numbers | ARIN |  Antarctica, Canada, parts of the Caribbean, and the United States |
+| Asia-Pacific Network Information Centre | APNIC |  East Asia, Oceania, South Asia, and Southeast Asia |
+| Latin American and Caribbean Network Information Centre | LACNIC | Most of the Caribbean and all of Latin America |
+| Réseaux IP Européens Network Coordination Centre | RIPE NCC |  Europe, Central Asia, Russia, and West Asia |
+
+Lookups offer complete domain registration information like:
+
+* Registrant information
+* Registrant organisation
+* Registrant country
+* Domain name server information
+* IP address
+* IP location
+* ASN (Autonomous System Number)
+* Domain status
+* WHOIS history
+* IP history
+* Registrar history
+* Hosting history
+* Email and postal address of the registrar and admin
+* Contact details
+
+There are plenty of WHOIS tools. As examples, an online one and the most common one, installed in almost any system, are going to be shown.
+
+* [Whois Domaintools](http://whois.domaintools.com) (_online_)
+
+![WHOIS Tesla](img/005_whois_tesla_online.png)
+
+* `whois` command. (_offline_)
+
+![WHOIS Tesla](img/006_whois_tesla_offline.png)
+
+#### DNS Footprinting
+
+[Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) (DNS) is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates more readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols.
+
+Several records can be created associated with a DNS entry:
+
+* A Record: An A record (Address Record) points a domain or subdomain to an IP address. i.e. `google.co.uk -> 172.217.20.131`.
+* CNAME: A CNAME (Canonical Name) points one domain or subdomain to another domain name, allowing you to update one A Record each time you make a change, regardless of how many Host Records need to resolve to that IP address. i.e. `imap.example.org -> mail.example.org`.
+* MX Entry: An MX Entry (Mail Exchanger) directs email to a particular mail server. Like a CNAME, MX Entries must point to a domain and never point directly to an IP address.
+* TXT Record: A text record was originally intended for human-readable text. These records are dynamic and can be used for several purposes.
+* SRV Record: An SRV (Service) record points one domain to another domain name using a specific destination port. SRV records allow specific services, such as VOIP or IM, to be directed to a separate location.
+* AAAA Record: The AAAA record is similar to the A record, but it allows you to point the domain to an Ipv6 address.
+* NS: Host name server.
+* SDA: Indicate authority for the domain.
+* PTR: IP-Host mapping.
+* RP: Responsible person.
+* HINFO: Host information.
+
+Similar to what happened with the WHOIS tools, there are plenty of DNS lookup tools. As done before, an online one and a command one are going to be shown.
+
+* [Dig (DNS lookup) - G Suite toolbox](https://toolbox.googleapps.com/apps/dig/) (_online_)
+
+![Dig Tesla](img/007_dig_tesla_online.png)
+
+* `dig` command. (_offline_)
+
+![Dig Tesla](img/008_dig_tesla_offline.png)
+
+#### Network Footprinting
+
+Attackers try to collect as much information as possible about the target system to find ways to penetrate the system and network footprinting is one of the most important parts of this process. Types of information we can find with network footprinting tools are:
+
+* Network address ranges
+* Hostnames
+* Exposed hosts
+* OS and application version information
+* Path state of the host and the applications
+* Structure of the application and back-end servers
+
+Some tools attackers can use to achieve their goals are:
+
+* WHOIS (already discussed)
+* Ping
+* Nslookup
+* Tracert
+
+As a probe of concept, the next image represents the execution of the `traceroute` command present in almost all systems. The image shows the path information between source and destination in the hop by hop manner, listing the hops and the latency between hops.
+
+![Traceroute to Google](img/009_traceroute_google.png)
+
+#### Footprinting through Social Engineering
+
+Social engineering has been named a few times along this document but, it has not been properly defined. The Social engineering term refers to a technique of psychological manipulation to gather information from different social interactions online or offline. And, it has proven to be an invaluable source of information. In the end, it what is said, the human is, sometimes, the weakest link in the security chain.
+
+There is almost an infinite number of social engineering techniques and, after a few conversations with social engineers, it is easy to realise that every single one of them has its style adapted to their interpersonal skills. Despite this, there are a few basic techniques it can be listed:
+
+* Eavesdropping: Eavesdropping is the act of secretly or stealthily listening to the private conversation or communications of others without their consent. Listening conversation includes listening, reading or accessing any source of information without being notified. The practice is widely regarded as unethical, and in many jurisdictions is illegal.
+* Shoulder surfing: Taking this literally, it is gathering information by standing behind the targets when they are interacting with sensitive information. It is used to obtain information such as personal identification numbers (PINs), passwords and other confidential data, for example, the keystrokes on a device or sensitive information in the screen.
+* Dumpster diving: It is salvaging from large commercial, residential, industrial and construction containers for unused items discarded by their owners, but deemed useful to the picker.
+* Impersonation:  Impersonation differs from other forms of social engineering because it occurs in person, rather than over the phone or through email. The social engineer "impersonates" or plays the role of someone the targets are likely to trust or obey convincingly enough to fool them into allowing access to offices, to information, or systems. This type of social engineering plays on people natural tendencies to believe that people are who they say they are, and to follow instructions when asked by an authority figure. It involves the conscious manipulation of a victim to obtain information without the individual realizing that a security breach is occurring.
+* Phishing: It is the fraudulent attempt to obtain sensitive information by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing or instant messaging. It often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site.
+
+Some information attackers can obtain using social engineering are:
+
+* Credit card information
+* Usernames and passwords
+* Security devices and technology information
+* Operating systems information
+* Software information
+* Network information
+* IP addresses and name server's information
+
+##### Maltego
+
+One very interesting tool is [Maltego](https://www.maltego.com). Maltego is an open-source intelligence and graphical link analysis tool for gathering and connecting information for investigative tasks. ​Using Maltego attackers can automate the process of gathering information from different data sources.
+
+[![Maltego - Automated Information Gathering](https://img.youtube.com/vi/zemNLx0-LRw/0.jpg)](https://www.youtube.com/watch?v=zemNLx0-LRw)
+
+##### Recon-ng
+
+[Recon-ng](https://github.com/lanmaster53/recon-ng) is a full-featured Web Reconnaissance framework written in Python. Complete with independent modules, database interaction, built in convenience functions, interactive help, and command completion, Recon-ng provides a powerful environment in which open source web-based reconnaissance can be conducted quickly and thoroughly.
+
+[![Recon-ng V5 - Introduction And New Updates](https://img.youtube.com/vi/1RCqOhb0yxE/0.jpg)](https://www.youtube.com/watch?v=1RCqOhb0yxE&list=PLBf0hzazHTGOg9taK90uFjdcb8UgGfRKZ)
+
+##### FOCA
+
+[FOCA (Fingerprinting Organizations with Collected Archives)](https://github.com/ElevenPaths/FOCA) is a tool used mainly to find metadata and hidden information in the documents it scans. These documents may be on webpages and can be downloaded and analysed with FOCA.
+
+##### Metasploit Framework
+
+[Metasploit Framework](https://github.com/rapid7/metasploit-framework) is another impressive tool with multiple uses but, it can be used to scan and gather information about a target. The Pro version can be used to automatise some of the steps in the next phases of an attack but, the free version is more than enough for this phase. You can find a comparison of both versions [here](https://www.rapid7.com/products/metasploit/download/editions/)
+
+// TODO: Find a good tutorial o produce something (video o text/images)
+
+#### Countermeasures of Footprinting
+
+Among all the policies that can be set in place to try to prevent footprinting probably the most important thing is to provide education, training and awareness to employees of an organisation. Without this, no matter how many polices or countermeasures companies set, network restrictions, good server configurations, double checks on reports, press releases, everything will in some point fail if organisation users are not properly trained.
