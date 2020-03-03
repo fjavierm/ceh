@@ -289,7 +289,7 @@ Organisation's reputation can be tracked too using online reputation management 
 
 One example of these tools can be [WhosTalking](https://www.whostalkinseo.com).
 
-#### Whois Footprinting
+#### Whois Footprinting
 
 WHOIS is a query and response protocol that is widely used for querying databases that store the registered users or assignees of an Internet resource, such as a domain name, an IP address block or an autonomous system. WHOIS lookups can help attackers to find out who is behind the target domain. WHOIS is maintained by the organisation Regional Internet Registries (RIR). All the registrations are divided into five regions:
 
