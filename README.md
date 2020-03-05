@@ -6,6 +6,29 @@ The reason to use this format instead of the usual blog format, [Binary Coders](
 
 I hope, if you have landed here, this document can be of any use for you.
 
+## Sections
+
+1. [Introduction to Ethical Hacking](01-Introduction_to-Ethical_Hacking/README.md)
+2. [Footprinting and Reconnaissance](02-Footprinting_and_Reconnaissance/README.md)
+3. [Scanning Networks](03-Scanning_Networks/README.md)
+4. Enumeration
+5. Vulnerability Analysis
+6. System Hacking
+7. Malware Threats
+8. Sniffing
+9. Social Engineering
+10. Denial of Service
+11. Session Hijacking
+12. Evading IDS, Firewalls, and Honeypots Technology Brief
+13. Hacking Web Servers
+14. Hacking Web Applications
+15. SQL Injection
+16. Hacking Wireless Networks
+17. Hacking Mobile Platforms
+18. IoT Hacking
+19. Cloud Computing
+20. Cryptography
+
 ## Information references
 
 This text is a compilation of my thoughts, information that I have collected or learn reading, watching conferences or videos in the past and, obviously, some search over the Internet. For all the information extracted from different sources where someone else has done a good job explaining a concept, below it can be found a list of references:
