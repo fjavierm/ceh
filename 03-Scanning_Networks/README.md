@@ -50,13 +50,13 @@ As named before, a TCP communication starts with a three-way handshake
 
 ![Three-way handsake](img/011_tcp_3_way_handshake.png)
 
-There are multiple network scanners that it will allow to use and send packets containing the different flags but, it is worth to say that there are some tools it can use to craft packets in a more manual way. [Python](https://www.python.org), for example, using the [Scrapy](https://scrapy.org) library gives versatility to create them programmatically and the tool [hping3](https://tools.kali.org/information-gathering/hping3) can help with it too. This will allow attackers a more fine control when testing a firewall or doing advanced port scanning. Also, some low point of view is always instructive
+There are multiple network scanners that it will allow to use and send packets containing the different flags but, it is worth to say that there are some tools that can be used to handcraft packets. [Python](https://www.python.org), for example, using the [Scrapy](https://scrapy.org) library gives versatility to create them programmatically and the tool [hping3](https://tools.kali.org/information-gathering/hping3) can help with it too. This will allow attackers a more fine control when testing a firewall or doing advanced port scanning. Also, some low point of view is always instructive
 
 We can generate some packets with the flag SYN to do some port scanning:
 
 ![SYN packet](img/012_sys_packet.png)
 
-This test returns a SYN/ACK if the communication has been accepted or RST/ACK if the port is closed or filtered. In this case, the destination port of the packet is open.
+This test returns SYN/ACK if the communication has been accepted or RST/ACK if the port is closed or filtered. In this case, the destination port of the packet is open.
 
 Hping3 is a very versatile tool with multiple options.
 
@@ -70,7 +70,7 @@ In the same way, TCP packets have been generated with hping3, UDP packets can be
 
 ![UDP packet](img/013_udp_packet.png)
 
-In this case, it is not possible to reach the server because the port 80 is using the TCP protocol.
+In this case, it is not possible to reach the server because its port 80 is using the TCP protocol.
 
 ## Scanning methodology
 
@@ -78,15 +78,15 @@ It is good for attackers to follow some kind of methodology or system to avoid m
 
 ### Check for live systems
 
-Discovering which host are alive in the target's network. This can be done using [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) packets. The attacker sends an `ICMP Echo`and the server responds with an `ICMP Echo Reply` if it is alive. The tool `ping` is an example of this.
+Discovering which host is alive in the target's network. This can be done using [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) packets. The attacker sends an `ICMP Echo`and the server responds with an `ICMP Echo Reply` if it is alive. The tool `ping` is an example of this.
 
 #### ICMP scan
 
-Technique to identify live servers using ICMP packets.
+The technique to identify live servers using ICMP packets.
 
 #### Ping sweep
 
-Technique to identify live server using ICMP packets at a large scale using IP ranges.
+The technique to identify live server using ICMP packets at a large scale using IP ranges.
 
 ### Discovering open ports
 
@@ -124,11 +124,11 @@ There is a variety of different scanning techniques that attackers can use to ga
 
 ##### Full Open Scan
 
-In this type of scanner the three-way handshake is initiated and completed. It is easy to detect and log by security devices. Does not require superuser privileges.
+In this type of scanner, the three-way handshake is initiated and completed. It is easy to detect and log by security devices. Does not require superuser privileges.
 
 ##### Half Open Scan
 
-Also know as stealth scan, 
+Also, know as stealth scan, 
 
 ### Scanning beyond IDS
 
