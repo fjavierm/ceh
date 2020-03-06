@@ -104,6 +104,8 @@ Port scan tools are widely spread. They give us multiple information about a liv
 
 Without questions, the most well know is [Nmap](https://nmap.org). Nowadays, it is not just a port scanner, it can perform some other things but, here, the only interest is its scanning capabilities. Nmap can discover live hosts, open ports, services version and operative systems among other things.
 
+When talking about the different scanning techniques, some command will be shown referring to Nmap syntax.
+
 ##### hping2 and hping3
 
 hping3 has been already named but, it has not been listed the things that can be done with it and its great capabilities to handcraft packets. Things like:
@@ -126,11 +128,101 @@ There is a variety of different scanning techniques that attackers can use to ga
 
 In this type of scanner, the three-way handshake is initiated and completed. It is easy to detect and log by security devices. Does not require superuser privileges.
 
-##### Half Open Scan
+![Full Scan - Response for Open Ports](img/015_fs_responses_for_open_ports.png)
 
-Also, know as stealth scan, 
+![Full Scan -Response for Closed Ports](img/016_fs_responses_for_closed_ports.png)
+
+To perform this type of scan with Nmap, the next command can be executed:
+
+`nmap -sT <ip_address or range>`
+
+##### Stealth Scan - Half Open Scan
+
+Half Open Scan is also known as stealth scan. This type of scan starts the three-way handshake but, once it has received an initial response that allows deciding if a port is open or closed, interrupts the handshake, making the scan more difficult to detect.
+
+![Stealth Scan - Response for Open Ports](img/017_ss_responses_for_open_ports.png)
+
+![Stealth Scan - Response for Closed Ports](img/018_ss_responses_for_closed_ports.png)
+
+To perform this type of scan with Nmap, the next command can be executed:
+
+`nmap -sS <ip_address or range>`
+
+##### Inverse TCP Flag Scan
+
+Inverse TCP flag scanning works by sending TCP probe packets with or without TCP flags. Based on the response, it is possible to determine whether the port is open or closed. If there is no response, then the port is open. If the response is RST, then the port is closed.
+
+Probes with flags scan are known as Xmas scans. Probes without flags are known as Null scans.
+
+##### Xmas Scan
+
+Xmas scan works by sending a TCP frame with FIN, URG, and PUSH flags set to the target device. Based on the response, it is possible to determine whether the port is open or closed. If there is no response, then the port is open. If the response is RST, then the port is closed. It is important to note that this scan works only for UNIX hosts.
+
+![Xmas Scan - Response for Open Ports](img/019_xs_responses_for_open_ports.png)
+
+![Xmas Scan - Response for Closed Ports](img/020_xs_responses_for_closed_ports.png)
+
+To perform this type of scan with Nmap, the next command can be executed:
+
+`nmap -sX <ip_address or range>`
+
+##### Null Scan
+
+A Null Scan works sending a TCP packet that contains a sequence number of 0 and no flags set. Because the Null Scan does not contain any set flags, it can sometimes penetrate firewalls and edge routers that filter incoming packets with particular flags.
+
+The expected result of a Null Scan on an open port is no response. Since there are no flags set, the target will not know how to handle the request. It will discard the packet and no reply will be sent. If the port is closed, the target will send an RST packet in response.
+
+To perform this type of scan with Nmap, the next command can be executed:
+
+`nmap -sN <ip_address or range>`
+
+##### FIN Scan
+
+A FIN scan works sending a packet only with the flag FIN. Packets can bypass firewalls without modification. Closed ports reply to a FIN packet with the appropriate RST packet, whereas open ports ignore the packet on hand. This is typical behaviour due to the nature of TCP and is, in some ways, an inescapable downfall.
+
+To perform this type of scan with Nmap, the next command can be executed:
+
+`nmap -SF <ip_address or range>`
+
+##### ACK Flag Probe Scan
+
+ACK flag probe scanning works by sending TCP probe packets with ACK flag set to determine whether the port is open or closed. This is done by analyzing the TTL and WINDOW field of the received RST packet's header. The port is open if the TTL value is less than 64.
+
+Similarly, the port is also considered to be open if the WINDOW value is not 0 (zero). Otherwise, the port is considered to be closed.
+
+ACK flag probe is also used to determine the filtering rules of the target network. If there is no response, then that means that a stateful firewall is present. If the response is RST, then the port is not filtered.
+
+##### IDLE/IPID Header Scan
+
+IDLE/IPID header scan works by sending a spoofed source address to the target to determine which services are available. In this scan, attackers use IP address of a zombie machine for sending out the packets. Based on the IPID of the packer (fragment identification number), it is possible to determine whether the port is open or closed.
+
+Idle scans take advantage of predictable Identification field value from IP header: every IP packet from a given source has an ID that uniquely identifies fragments of an original IP datagram; the protocol implementation assigns values to this mandatory field generally by a fixed value increment. Because transmitted packets are numbered in a sequence you can say how many packets are transmitted between two packets that you receive.
+
+An attacker would first scan for a host with a sequential and predictable sequence number (IPID). The latest versions of Linux, Solaris, OpenBSD, and Windows Vista are not suitable as a zombie, since the IPID has been implemented with patches that randomized the IPID. Computers chosen to be used in this stage are known as "zombies".
+
+Once a suitable zombie is found the next step would be to try to establish a TCP connection with a given service (port) of the target system, impersonating the zombie. It is done by sending a SYN packet to the target computer, spoofing the IP address from the zombie, i.e. with the source address equal to a zombie IP address.
+
+If the port of the target computer is open it will accept the connection for the service, responding with a SYN/ACK packet back to the zombie.
+
+The zombie computer will then send a RST packet to the target computer (to reset the connection) because it did not send the SYN packet in the first place.
+
+Since the zombie had to send the RST packet it will increment its IPID. This is how an attacker would find out if the targets port is open. The attacker will send another packet to the zombie. If the IPID is incremented only by a step then the attacker would know that the particular port is closed.
+
+The method assumes that zombie has no other interactions: if there is any message sent for other reasons between the first interaction of the attacker with the zombie and the second interaction other than RST message, there will be a false positive.
+
+![IDLE/IPID Header Scan](img/021_idle_ipid_header_scan.png)
+
+##### UDP Scan
+
+UDP scanning uses the UDP protocol to test whether the port is open or closed. In this scan, there is no flag manipulation. Instead, ICMP is used to determine if the port is open or not. So, if a packet is sent to a port and the ICMP port unreachable packet is returned, then that means that the port is closed. If, however, there is no response, then the port is open.
+
+ To perform this type of scan with Nmap, the next command can be executed:
+
+`nmap -sU -v <ip_address or range>`
 
 ### Scanning beyond IDS
+
+
 
 ### Banner grabbing
 
