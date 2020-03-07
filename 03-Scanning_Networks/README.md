@@ -216,18 +216,105 @@ The method assumes that zombie has no other interactions: if there is any messag
 
 UDP scanning uses the UDP protocol to test whether the port is open or closed. In this scan, there is no flag manipulation. Instead, ICMP is used to determine if the port is open or not. So, if a packet is sent to a port and the ICMP port unreachable packet is returned, then that means that the port is closed. If, however, there is no response, then the port is open.
 
- To perform this type of scan with Nmap, the next command can be executed:
+To perform this type of scan with Nmap, the next command can be executed:
 
 `nmap -sU -v <ip_address or range>`
 
 ### Scanning beyond IDS
 
+Another common technique used to bypass security measures like firewalls, [IDS](https://en.wikipedia.org/wiki/Intrusion_detection_system) and [IPS](https://en.wikipedia.org/wiki/Intrusion_detection_system) is fragmentation.
 
+Fragmentation of payload and sending small packets makes more difficult the detection usually based on known payloads. To be able to decide if an attack is taking place security measures like the named before need to assemble the packet and the contained payload to be able to compare it. The packet fragmentation can be combined with sending the packets out of order and with pauses to create a delay.
 
 ### Banner grabbing
 
+Banner grabbing is a  technique that focuses its efforts to determinate the services that are running in a target machine and its versions. Listen to the responses send it by the different services running in the target machine and examinates them to extract the service banner information. By gathering information about the running services, attackers can determinate existing vulnerabilities and bugs and try to exploit them.
+
+There are multiple tools to perform banner grabbing like:
+
+* Netcraft
+* Netcat
+* Telnet
+* Maltego
+
+### OS Fingerprinting and 
+
+OS fingerprinting is a technique is used to identify the operating systems running in the target machines. By gathering information about the running operative systems, attackers can determinate existing vulnerabilities and bugs and try to exploit them. There are two types of OS fingerprinting:
+
+1. Active OS fingerprinting
+2. Passive OS fingerprinting
+
+#### Active OS fingerprinting
+
+The active OS fingerprinting is a similar technique to scanning. It sends TCP and UDP packets and observes the response from the target host.
+
+To perform this type of scan with Nmap, the next command can be executed:
+
+`nmap -O -v <ip_address or range>`
+
+#### Passive OS fingerprinting
+
+The passive OS fingerprint requires a detailed assessment of traffic. It can be performed analysing network traffic paying special attention to the TTL (Time to Live) value and Window size found in the headers or TCP packets. Some common examples of these values are:
+
+| Operative System | TTL | TCP Window Size |
+|:-|:-|:-|:-|
+| Linux | 64 | 5840 |
+| Google customised Linux | 64 | 5720 |
+| FreeBSD | 64 | 65535 |
+| Windows XP | 128 | 65535 |
+| Windows Vista, 7 and Server 2008 | 128 | 8192 |
+| Cisco Router (iOS 12.4) | 255 | 4128 |
+
 ### Scanning vulnerabilities
+
+A vulnerability scanner is an application that identifies and creates an inventory of all the systems, from the server to the coffee maker, connected to a network. For each device that it identifies it also attempts to identify the operating system it runs and the software installed on it, along with other attributes such as open ports and user accounts. Most vulnerability scanners will also attempt to log in to systems using default or other credentials in order to build a more detailed picture of the system.
+
+After building up an inventory, the vulnerability scanner checks each item in the inventory against one or more databases of known vulnerabilities to see if any items are subject to any of these vulnerabilities.
+
+The result of a vulnerability scan is a list of all the systems found and identified on the network, highlighting any that have known vulnerabilities that may need attention.
+
+Many vulnerability scanners are proprietary products, but they're also a small number of open-source vulnerability scanners or free "community" versions of proprietary scanners. These include:
+
+* OpenVAS
+* Nexpose Community
+* Nikto
+* Nessus (It has one free limited version)
 
 ### Network diagram
 
+At the end of the scanning phase, the attacker's objective is to possess extensive knowledge about the target's network, to keep this information updated and to use it to compromise the system.
+
+There are different ways to keep track of the diagrams attacker are going to be able to generate, they range from pen and paper to digital diagraming tools.
+
+In addition to all the scans an attacker can perform, some advanced network monitoring tools can be used to generate these network diagrams.
+
+The combination of all these scans and tools should leave attackers with a pretty good knowledge of the target's network.
+
 ### Proxies
+
+For obvious reasons, attackers want to remain anonymous to avoid to be catch and prosecuted for their actions. For this purpose, proxies can be a very handy tool.
+
+A proxy server is basically another computer which serves as an intermediary through which internet requests are processed. By connecting through one of these servers, the attacker's computer sends requests to the server which then processes these requests and returns the responses. In this way, it serves as an intermediary between the attacker machine and the target machines. Proxies are used for several reasons such as to filter web content, to go around restrictions such as parental blocks, to screen downloads and uploads and to provide anonymity when surfing the internet.
+
+#### Proxy Chaining
+
+Proxy chaining is a basic technique that makes use of multiple proxy servers to make harder to detect the real origin of the internet requests. Attackers connect to one server after the other to create a chain of proxy servers between them and the target system, making any effort of reverse tracing harder and harder the more proxy servers they have used. The downside of this technique is that connections are less stable and tend to slow down the traffic with every extra connection.
+
+### Anonymisers
+
+An anonymiser is a tool that completely hides or removes identity-related information to make an activity untraceable. The basic purposes of using anonymisers are:
+
+* Minimising risk
+* Identity theft prevention
+* Bypass restrictions and censorships
+* Untraceable activity on the Internet
+
+A very popular anonymiser is [Tails](https://tails.boum.org) It is a very popular censorship circumvention tools based on GNU/Linux. It is a live image designed to help users to navigate leaving no trace behind. Trails preserve privacy and anonymity.
+
+### Spoofing IP Addresses
+
+IP spoofing is the creation of Internet Protocol (IP) packets which have a modified source address in order to either hide the identity of the sender, to impersonate another computer system or both.
+
+Sending and receiving IP packets is a primary way in which networked computers and other devices communicate, and constitutes the basis of the modern internet. All IP packets contain a header which precedes the body of the packet and contains important routing information, including the source address. In a normal packet, the source IP address is the address of the sender of the packet. If the packet has been spoofed, the source address will be forged.
+
+It is a technique often used by bad actors to invoke DDoS attacks against a target device or the surrounding infrastructure. Spoofing is also used to masquerade as another device so that responses are sent to that targeted device instead.
