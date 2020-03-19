@@ -35,3 +35,4 @@ This text is a compilation of my thoughts, information that I have collected or 
 
 * [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 * [CloudFlare Learning](https://www.cloudflare.com/learning)
+* [Prilege Escalation](https://www.netsparker.com/blog/web-security/privilege-escalation/)
