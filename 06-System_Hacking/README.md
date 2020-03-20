@@ -319,7 +319,7 @@ As steganography types we can find:
 
 Steganalysis is the discovery of the existence of hidden information; therefore, like cryptography and cryptanalysis, the goal of steganalysis is to discover hidden information and to break the security of its carriers. Steganalysis is the practice of attacking steganography methods for the detection, extraction, destruction and manipulation of the hidden data in a stego object.
 
-Attacks can be of several types for example, some attacks merely detect the presence of hidden data, some try to detect and extract the hidden data, some just try to destroy the hidden data by finding the existence without trying to extract hidden data and some try to replace hidden data with other data by finding the exact location where the data is hidden.
+Attacks can be of several types, for example, some attacks merely detect the presence of hidden data, some try to detect and extract the hidden data, some just try to destroy the hidden data by finding the existence without trying to extract hidden data and some try to replace hidden data with other data by finding the exact location where the data is hidden.
 
 Detection is enough to foil the very purpose of steganography even if the secret message is not extracted because detecting the existence of hidden data is enough if it needs to be destroyed. Detection is generally carried out by identifying some characteristic feature of images that is altered by the hidden data. A good steganalyst must be aware of the methods and techniques of the steganography tools to efficiently attack.
 
@@ -329,7 +329,7 @@ Classification of attacks based on information available to the attacker:
 
 * **Known cover attack**: Both cover and stego are known.
 
-* **Known message attack**: In some cases message is known and analyzing the stego object pattern for this embedded message may help to attack similar systems.
+* **Known message attack**: In some cases, the message is known and analyzing the stego object pattern for this embedded message may help to attack similar systems.
 
 * **Chosen stego attack**: Steganographic algorithm and stego object are known.
 
@@ -348,3 +348,44 @@ the difference visually in these single bit images.
 
 ## Covering tracks
 
+Covering Tracks is the final stage of a penetration test as a process – all the rest is paperwork. In a nutshell, its goal is to erase the digital signs left out by the pentester during the earlier stages of the test. These digital signs, in essence, prove the pentester’s presence in the targeted computer system. The same applies to an attacker, well, probably without the paperwork.
+
+The purpose of this phase is to cover up all the little clues that would give away the nature of attackers' deeds. Covering Tracks consists of:
+
+1. Measures for the prevention of real-time detection (Anti-Incident Response).
+2. Measures for the prevention of digital evidence collection during a possible post factum inquiry (Anti-Forensics).
+
+Most common techniques that are often used by attackers to cover tracks on a target system are:
+
+* Disabling auditing
+* Moving, hiding, altering or renaming log files
+* Deleting evidence
+* Log tampering
+
+### Disabling Auditing
+
+Operative systems have active auditing tools detecting, monitoring and tracking events. One of the best methods attackers can use is not leaving any trace they have been there. If, once they have access to a system, they disable the auditing system, their activity will not be registered. Even better, if they enable the auditing system when they leave.
+
+### Moving, Hiding, Altering or Renaming Files
+
+Things, like moving given files, changing extensions, renaming, split files into small partitions and conceal each partition at the end of other files or hide one file inside another, seem naive but very effective, especially, when we consider that sometimes people involved in a cyber investigation do not have the time to examine one by one all the files residing in a computer system.
+
+And, timestamping, due to the lack of time of investigators, one approach which allows them to prioritize their search of information potentially relevant to the investigation is to arrange this information in chronological order so that they can focus on the important pieces of data occurred around the moment of the cybercrime if it is known but, attackers can tackle this approach by modifying the metadata about any files they want. In most cases, they change the date on which each file was created, last accessed, or last modified. This effective anti-forensic technique is named time stopping, and tools to detect its creations do exist.
+
+### Deleting Evidence
+
+A common delusion among persons who count on commercial disk cleaners or privacy protection tools to delete some data they do not want others to see is the belief that these tools remove everything from the hard disc once and for all.
+
+Despite the imperfectness of the delete method. A well-done erase will irreversibly dispose of evidence, leaving investigators empty-handed. Nevertheless, not so proficient users are prone to make mistakes, which may cost them a lot in cases of unsuccessful attempts to delete the data on the hard disk.
+
+Unless we discuss SSD drives (which are programmed to destroy data automatically), hard drives and storage media are susceptible to almost full recovery via data carving. All in all, this method is very popular but not so effective. 
+
+### Log Tampering
+
+In Windows-based computer systems, all of the log files are stored in the event viewer, easily findable via the “Search” bar. In almost all Linux and UNIX operating systems the log files are located in the `/var/log` directory, and in MAC operating systems one should open the Finder, click “_Go to Folder_” in the Go menu, and type in `/Library/Logs` and press Enter to activate the Log File Management which will display all log files.
+
+If administrators want to check for malicious activities within the system for which they are responsible, they simply examine the log files. There are two kinds of log files: system generated and application generated.
+
+When it comes to log manipulation, the attacker usually has two options. The first option is to delete the log, and the second one is to alter its content. Deletion of log files and replacement of system binaries with Trojan malware ensures that the security staff employed by the targeted company will not detect evidence of the cyber intrusion.
+
+The first choice – to delete the log files – is not always the ultimate solution to undetectability, since the removal of such information might create a gap between logs files and raise suspicion. One look at the processes and log files would be enough for a system administrator at the target’s premises to establish the existence of any malicious activities.
