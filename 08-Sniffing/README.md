@@ -146,3 +146,150 @@ ARP spoofing can be used for:
 
 ## Spoofing Attack
 
+A MAC spoofing attack is where the intruder sniffs the network for valid MAC addresses and attempts to act as one of the valid MAC addresses. The intruder then presents itself as the default gateway and copies all of the data forwarded to the default gateway without being detected. This provides the intruder valuable details about applications in use and destination host IP addresses. This enables the spoofed CAM entry on the switch to be overwritten as well.
+
+MAC address spoofing is used to impersonate legitimate devices, circumvent existing security mechanisms and to hide malicious intent. It can be an effective attack on defensive strategies where user and device identity provide a basis for access control policies.
+
+In a typical MAC spoofing sequence, the attacker:
+
+1. Identifies the MAC address of a device with authorized access to the network.
+2. Connects a computer to the network, changing its MAC address to match (impersonate) that of the authorized device.
+3. Exploits security controls based on static MAC addresses to access network segments, applications and sensitive information.
+
+* **Non-Legitimate uses of MAC spoofing**: An example of an illegitimate use is when an attacker changes the MAC address of his station to enter a target network as an authorized user-taking over a computer’s identity that is authorized to function on the network. With this new identity, an attacker can wreak havoc: for example to launch denial of service attacks or to bypass access control mechanisms to advance more intrusion. An attacker might choose to change one’s MAC address in an attempt to evade network intrusion detection systems, to become invisible to security measures, allowing more time to act without detection.
+
+* **Legitimate uses of MAC spoofing**: An example of a legitimate use of MAC spoofing is changing the function of a single computer from router to computer and back to router through MAC spoofing. If you only have a single public IP, you can only hook up one unit directly (PC or router). If one has two WAN IPs, the MAC address of the two devices must be different.
+
+### How to Defend it
+
+There are many tools and practices that organizations can employ to reduce the threat of spoofing attacks. Common measures that organizations can take for spoofing attack prevention include:
+
+* **Packet filtering**: Packet filters inspect packets as they are transmitted across a network. Packet filters are useful in IP address spoofing attack prevention because they are capable of filtering out and blocking packets with conflicting source address information (packets from outside the network that show source addresses from inside the network and vice-versa).
+
+* **Avoid trust relationships**: Organizations should develop protocols that rely on trust relationships as little as possible. It is significantly easier for attackers to run spoofing attacks when trust relationships are in place because trust relationships only use IP addresses for authentication.
+
+* **Use spoofing detection software**: There are many programs available that help organizations detect spoofing attacks, particularly ARP Spoofing. These programs work by inspecting and certifying data before it is transmitted and blocking data that appears to be spoofed.
+
+* **Use cryptographic network protocols**: Transport Layer Security (TLS), Secure Shell (SSH), HTTP Secure (HTTPS) and other secure communications protocols bolster spoofing attack prevention efforts by encrypting data before it is sent and authenticating data as it is received.
+
+## DNS Poisoning
+
+Attackers can poison a DNS cache by tricking DNS resolvers into caching false information, with the result that the resolver sends the wrong IP address to clients, and users attempting to navigate to a website will be directed to the wrong place.
+
+DNS cache poisoning is the act of entering false information into a DNS cache so that DNS queries return an incorrect response and users are directed to the wrong websites. DNS cache poisoning is also known as 'DNS spoofing.' IP addresses are the 'room numbers' of the Internet, enabling web traffic to arrive in the right places. DNS resolver caches are the 'campus directory,' and when they store faulty information, traffic goes to the wrong places until the cached information is corrected. (Note that this does not actually disconnect the real websites from their real IP addresses.)
+
+Because there is typically no way for DNS resolvers to verify the data in their caches, incorrect DNS information remains in the cache until the time to live (TTL) expires, or until it is removed manually. A number of vulnerabilities make DNS poisoning possible, but the chief problem is that DNS was built for a much smaller Internet and based on a principle of trust (much like BGP). A more secure DNS protocol called DNSSEC aims to solve some of these problems, but it has not been widely adopted yet.
+
+Attackers can poison DNS caches by impersonating DNS nameservers, making a request to a DNS resolver, and then forging the reply when the DNS resolver queries a nameserver. This is possible because DNS servers use UDP instead of TCP, and because currently there is no verification for DNS information.
+
+### Types of DNS Spoofing
+
+#### Intranet DNS Spoofing
+
+Intranet DSN spoofing is normally performed over a switched LAN by attackers with the help of ARP poisoning techniques. Attackers sniff the packets, extract the ID of DNS requests and reply with the fake IP translation directing the traffic to the malicious site. Attackers must be quick enough to respond before the legitimate DSN server resolves the query.
+
+#### Internet DNS Spoofing
+
+Internet DSN spoofing is performed by replacing the DNS configuration on the target machine. All DNS queries will be directed to a malicious DSN server controlled by the attacker, directing the traffic to malicious sites. Usually, internet DNS spoofing is performed by deploying a trojan or infecting the target.
+
+#### Proxy Server DNS Poisoning
+
+Similar to the previous one, proxy server DNS poisoning is performed by replacing the DNS configuration from the web browser of a target. All web queries will be directed to a malicious proxy server controlled by the attacker.
+
+#### DNS Cache Poisoning
+
+Users tend to use the DSN servers provided by Internet Service Providers (ISP) but, organisations tend to have their own servers to improve performance by caching frequently or previously generated queries. Attackers can add or alter entries in the DNS record cache to redirect users to malicious sites. When an internal DNS server is unable to validate a DNS response from an authoritative DSN server, it updates the entry locally to entertain the user requests.
+
+### How to Defend it
+
+#### Audit your DNS zones
+
+First things first. The most important thing you will have to review apart from the DNS server main configuration is your DNS zone.
+
+As time passes, we tend to forget about test domain names or subdomains that sometimes run outdated software or unrestricted areas vulnerable to attack, or if an A record is showing an internal/reserved intranet area by mistake.
+
+Start exploring all your DNS public records using SecurityTrails: review all your zones, records and IPs. Audit your A, CNAME and MX records today. It is easy, as we have seen in past blog posts, like when we explored Google DNS or Microsoft subdomains.
+
+#### Keep your DNS servers up-to-date
+
+Running your own Name Servers gives you the ability to configure, test and try things that you may not be able to on private DNS servers like the ones your hosting provider gives you, or when you sign up for an account at Cloudflare.
+
+When you decide to run your own DNS servers, probably using software like BIND, PowerDNS, NSD, or Microsoft DNS, and as the rest of the operating system software, it is crucial to keep these packages up-to-date in order to prevent service exploits targeting bugs and vulnerabilities.
+
+Latest versions of all popular DNS servers include patches against known vulnerabilities, as well as support for security technologies like DNSSec and RRL (Response Rate Limiting) that are pretty useful in preventing DNS reflection attacks.
+
+#### Hide BIND version
+
+While some people cannot consider this as a security practice, security through obscurity is just another way to hide information from attackers when they are performing their initial security audit against your server.
+
+#### Restrict Zone Transfers
+
+A DNS zone transfer is just a copy of the DNS zone, and while this technique is often used by slave name servers to query master DNS servers, sometimes attackers can try to perform a DNS zone transfer in order to have a better understanding of your network topology.
+
+One of the things that can be done to prevent these kinds of tricks is to restrict which DNS servers are allowed to perform a zone transfer or at least limit the allowed IP addresses that can make such requests.
+
+That's why limiting zone transfers are one of the best ways to protect your precious DNS zone information.
+
+####  Disable DNS recursion to prevent DNS poisoning attacks
+
+DNS recursion is enabled by default on most Bind servers on all major Linux distributions, and this can lead to serious security issues, like DNS poisoning attacks, among others.
+
+When DNS recursion is enabled on your server configuration, the DNS server allows recursive queries for other domains that are actually not real master zones located on the same name server, this simply allows third-party hosts to query the name servers as they want.
+
+This setting can also increase your exposure to DNS amplification attacks, that is why you should always disable DNS recursion on your DNS servers if your plan is not to receive recursive DNS queries.
+
+#### Use isolated DNS servers
+
+Running your own DNS server is possible using a dedicated server or cloud where you host the rest of the web services like an application server, HTTP server or database server.
+
+This is a common practice among small companies who often store all their server services in a single cPanel or Plesk box.
+
+If you decide to put all your eggs in one basket, you must ensure that this box has a pretty solid server hardening for each daemon you are running, as well as for the applications running inside of the operating system.
+
+Although the best you can do is to use your own dedicated DNS server environment, it does not matter if it is based on Cloud or Dedicated servers as long as it is 100% dedicated to DNS services only.
+
+Having this DNS server isolated from the rest of your application servers will help to reduce the chance of getting hit by web application attacks.
+
+Close all unneeded server ports, stop unwanted OS services, filter your traffic using a firewall, and only allow basic services such as SSH and the DNS server itself. This will help a lot to mitigate the chances of a DNS attack.
+
+#### Use a DDOS mitigation provider
+
+While small and midsize DOS and DDOS can be mitigated by tweaking network filters, HTTP services, and kernel response from the operating system, when a big DDOS comes after you, only a few Data Centers will be able to help their customers with a real anti-DDOS service.
+
+If you run your own DNS servers and you are under massive DDOS attack, your usage in terms of bandwidth usage or packets per second will probably cause you a big downtime, if your service provider does not apply a null route to your IP addresses first.
+
+That is why the best thing you can do is to hire an anti-DDOS specialized service like Cloudflare, Incapsula or Akamai to mitigate DDOS in the best possible way and keep your DNS servers secure and responding well at all times.
+
+#### Two-Factor Authentication
+
+If you are not running your own DNS servers and decide to use a third party DNS managed service like Cloudflare DNS or DNSMadeEasy, you can be sure their servers are pretty well secured.
+
+However, none (not even their CEO) is safe from getting an account compromise, but the probabilities are very low, to be honest.
+
+And, even in the worst case, an attacker can gain access to your username and password, but you can still have your account under control if you are using two-factor authentication.
+
+## Sniffing Tools
+
+There are som sniffers out there but, probably, the most well know is [Wireshark](https://www.wireshark.org). It is what is called a _network protocol analyser_. It is a free and open-source tool. And it allows multiple filter options when capturing traffic.
+
+## Countermeasures
+
+Best practices against sniffing include the following approaches to protect the network traffic:
+
+* Using HTTPS instead of HTTP
+* Using SFTP instead of FTP
+* Use switch instead of hub
+* Configure port-security
+* Configure DHCP snooping
+* Configure Dynamic ARP inspection
+* Configure source guard
+* Use sniffing detection tools to detect NIC functioning in a promiscuous mode
+* Use strong encryption protocols
+
+## Sniffing Detection Techniques
+
+* **Ping method**: Ping technique can be used to detect sniffers but, been an older technique is not very reliable. A ping request is sent to the suspicious IP address, if it is running in promiscuous mode it will respond.
+
+* **ARP method**: Using ARP, sniffers can be detected with the help of the cache. By sending a non-broadcast ARP package to the suspect, the MAC address will be cached if the NIC is running in promiscuous mode. Next step is to send a broadcast ping with spoofed address. If the machine is running in promiscuous mode, it will be able to reply to the packet only as it has already learned the actual MAC from the sniffed non-broadcast ARP packet.
+
+* **Promiscuous Detection Tool**: Promiscuous detection tools like Nmap can also be used to detect NIC running in promiscuous mode.
