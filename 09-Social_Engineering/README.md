@@ -86,3 +86,59 @@ Similar to the previous one but, in this case, usually, the download of the appl
 ### Insider Attack
 
 Not all the attacks are conducted by third parties, sometimes a frustrated or unhappy employee can perpetrate the attacks. They can be acting as vengeance or being paid by a competitor to spy and steal information.
+
+### Impersonation on Social Networks
+
+After collect information about a target, attackers can create fake profiles in social networks to deceive the target friends or groups the real user has links to.
+
+After joining a group or contacting some friends or colleagues attackers can start receiving juicy updates or, even, request people for some specific and sensitive information.
+
+### Identify Theft
+
+Identify theft is stealing the identification information of a person and is one of the most popular frauds.
+
+Identify theft can be split in three steps:
+
+1. Gathering information: Where using some or all of the methods seen previously, attackers can obtain information like full names, address or contact information of a person. In addition, accounts information, birth information, or utility bills.
+
+2. Fake identity proof: In this phase, attackers try to create fake driving licence cards, company ids, id cards or any other documents that can proof they are who they are saying.
+
+3. Fraud: Armed with all the fake documentation, attackers can try to get credits, a mortgage, spend money shopping, access to the company premisses or use the ids for future frauds.
+
+## Social Engineering Countermeasures
+
+Social engineering can me mitigated by several methods:
+
+1. Educate yourself: As said before, training and self-awareness for users is one of the best thigs to invert on.
+
+2. Be aware of the information you are releasing: Everything shared online when talking or creating a profile can be found by attackers.
+
+3. Determine which of your assets are most valuable to criminals: Companies tend to do assessments about what is valuable for them as a business but, this is not always what is valuable for attackers. Attackers want anything they can monetise.
+
+4. Write a policy and back it up with good awareness training: Write a security policy for protecting valuable data assets. Then back up that policy with good awareness training.
+
+5. Keep your software up to date: Hackers using social engineering techniques are often seeking to determine whether you are running unpatched, out-of-date software they can exploit.
+
+6. Give employees a sense of ownership when it comes to security: Employees need to feel involved, not just cold instructions to follow, they need to feel is important for them and they contribute.
+
+7. When asked for information, consider whether the person you are talking to deserves the information they are asking about: Before answering any questions, users should think if the person is asking needs to have this information and is allowed to have it.
+
+8. Watch for questions that do not fit the pretext: Users should pay attention to questions or request of information that does not fit the profile or the expected behaviour of the person asking.
+
+9. Stick to your guns: Common sense is the best defence. If, as a user, something feels off, trust the feeling, there will be always time to supply information after pertinent checks have been done.
+
+A quick list involving all the previous points could be:
+
+* Security of sensitive resources.
+* Physical security.
+* Monitoring.
+* Rotational duties.
+* Controlled access.
+* Least privileges.
+* Logging.
+* Privacy.
+* Strong policies.
+* Training.
+* Audit.
+* Bio-metric authentication.
+* Awareness against social engineering.
