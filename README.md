@@ -16,10 +16,10 @@ I hope, if you have landed here, this document can be of any use for you.
 6. [System Hacking](06-System_Hacking/README.md)
 7. [Malware Threats](07-Malware_Threats/README.md)
 8. [Sniffing](08-Sniffing/README.md)
-9. Social Engineering
-10. Denial of Service
-11. Session Hijacking
-12. Evading IDS, Firewalls, and Honeypots Technology Brief
+9. [Social Engineering](09-Social_Engineering/README.md)
+10. [Denial of Service](10-Denial_of_Services/README.md)
+11. [Session Hijacking](11-Session_Hijacking/README.md)
+12. Evading IDS, Firewalls, and Honeypots
 13. Hacking Web Servers
 14. Hacking Web Applications
 15. SQL Injection
