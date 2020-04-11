@@ -224,7 +224,7 @@ A screened subnet can be set with a firewall with three interfaces. These interf
 
 A multi-homed firewall is a firewall that has more than one network interface, with each interface connected to logically and physically separate network segments. It increases the efficiency and reliability of a network.
 
-![Multi-homed architecture](03_multi-homed_architecture.png)
+![Multi-homed architecture](img/03_multi-homed_architecture.png)
 
 ### Demilitarised Zone
 
