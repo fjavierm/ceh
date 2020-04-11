@@ -39,3 +39,4 @@ This text is a compilation of my thoughts, information that I have collected or 
 * [ENISA](https://www.enisa.europa.eu/topics/csirts-in-europe/glossary)
 * [OWASP Community Pages](https://owasp.org/www-community/)
 * [Rapid7 Blog](https://blog.rapid7.com)
+* [Barracuda Glossary](https://www.barracuda.com/glossary)
