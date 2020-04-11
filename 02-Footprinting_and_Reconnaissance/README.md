@@ -291,15 +291,25 @@ There are plenty of WHOIS tools. As examples, an online one and the most common 
 Several records can be created associated with a DNS entry:
 
 * **A Record**: An A record (Address Record) points a domain or subdomain to an IP address. i.e. `google.co.uk -> 172.217.20.131`.
+
 * **CNAME**: A CNAME (Canonical Name) points one domain or subdomain to another domain name, allowing you to update one A Record each time you make a change, regardless of how many Host Records need to resolve to that IP address. i.e. `imap.example.org -> mail.example.org`.
+
 * **MX Entry**: An MX Entry (Mail Exchanger) directs email to a particular mail server. Like a CNAME, MX Entries must point to a domain and never point directly to an IP address.
+
 * **TXT Record**: A text record was originally intended for human-readable text. These records are dynamic and can be used for several purposes.
+
 * **SRV Record**: An SRV (Service) record points one domain to another domain name using a specific destination port. SRV records allow specific services, such as VOIP or IM, to be directed to a separate location.
+
 * **AAAA Record**: The AAAA record is similar to the A record, but it allows you to point the domain to an Ipv6 address.
+
 * **NS**: Host name server.
+
 * **SDA**: Indicate authority for the domain.
+
 * **PTR**: IP-Host mapping.
+
 * **RP**: Responsible person.
+
 * **HINFO**: Host information.
 
 Similar to what happened with the WHOIS tools, there are plenty of DNS lookup tools. As done before, an online one and a command one are going to be shown.
@@ -340,11 +350,15 @@ Social engineering has been named a few times along this document but, it has no
 
 There is almost an infinite number of social engineering techniques and, after a few conversations with social engineers, it is easy to realise that every single one of them has its style adapted to their interpersonal skills. Despite this, there are a few basic techniques it can be listed:
 
-* Eavesdropping: Eavesdropping is the act of secretly or stealthily listening to the private conversation or communications of others without their consent. Listening conversation includes listening, reading or accessing any source of information without being notified. The practice is widely regarded as unethical, and in many jurisdictions is illegal.
-* Shoulder surfing: Taking this literally, it is gathering information by standing behind the targets when they are interacting with sensitive information. It is used to obtain information such as personal identification numbers (PINs), passwords and other confidential data, for example, the keystrokes on a device or sensitive information in the screen.
-* Dumpster diving: It is salvaging from large commercial, residential, industrial and construction containers for unused items discarded by their owners, but deemed useful to the picker.
-* Impersonation:  Impersonation differs from other forms of social engineering because it occurs in person, rather than over the phone or through email. The social engineer "impersonates" or plays the role of someone the targets are likely to trust or obey convincingly enough to fool them into allowing access to offices, to information, or systems. This type of social engineering plays on people natural tendencies to believe that people are who they say they are, and to follow instructions when asked by an authority figure. It involves the conscious manipulation of a victim to obtain information without the individual realizing that a security breach is occurring.
-* Phishing: It is the fraudulent attempt to obtain sensitive information by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing or instant messaging. It often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site.
+* **Eavesdropping**: Eavesdropping is the act of secretly or stealthily listening to the private conversation or communications of others without their consent. Listening conversation includes listening, reading or accessing any source of information without being notified. The practice is widely regarded as unethical, and in many jurisdictions is illegal.
+
+* **Shoulder surfing**: Taking this literally, it is gathering information by standing behind the targets when they are interacting with sensitive information. It is used to obtain information such as personal identification numbers (PINs), passwords and other confidential data, for example, the keystrokes on a device or sensitive information in the screen.
+
+* **Dumpster diving**: It is salvaging from large commercial, residential, industrial and construction containers for unused items discarded by their owners, but deemed useful to the picker.
+
+* **Impersonation**:  Impersonation differs from other forms of social engineering because it occurs in person, rather than over the phone or through email. The social engineer "impersonates" or plays the role of someone the targets are likely to trust or obey convincingly enough to fool them into allowing access to offices, to information, or systems. This type of social engineering plays on people natural tendencies to believe that people are who they say they are, and to follow instructions when asked by an authority figure. It involves the conscious manipulation of a victim to obtain information without the individual realizing that a security breach is occurring.
+
+* **Phishing**: It is the fraudulent attempt to obtain sensitive information by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing or instant messaging. It often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site.
 
 Some information attackers can obtain using social engineering are:
 

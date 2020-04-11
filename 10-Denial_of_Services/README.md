@@ -82,7 +82,7 @@ There are three most common ways to propagate malicious code. These methods are:
 
 * **Central source propagation**: Requires a central source where the attack toolkit is installed. When an attacker gains access to a machine, it connects to this central system and transfers the toolkit.
 
-* **Back-Chaining Propagation**: In this case the attack toolkit is installed in the attackers machine and when they gain access to a machine, they just connect back and download the toolkit to the vulnerable machine.
+* **Back-Chaining Propagation**: In this case the attack toolkit is installed in the attacker's machine and when they gain access to a machine, they just connect back and download the toolkit to the vulnerable machine.
 
 * **Autonomous propagation**: In this case, attackers send malicious code to the vulnerable machine, this malicious code installs the attack toolkit and search for other vulnerable machines.
 

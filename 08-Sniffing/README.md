@@ -48,7 +48,7 @@ Content Addressable Memory (CAM) table is a system memory construct used by Ethe
 
 The MAC Flooding is an attacking method intended to compromise the security of the network switches. Usually, the switches maintain a table structure called MAC Table. As it has been already seen, the hubs broadcast the data to the entire network allowing the data to reach all hosts on the network but switches send the data to the specific machines which the data is intended to be sent. This goal is achieved by the use of MAC tables.
 
- The aim of the MAC Flooding is to takedown this MAC Table. In a typical MAC Flooding attack, the attacker sends Ethernet Frames in a huge number. When sending many Ethernet Frames to the switch, these frames will have various sender addresses. The intention of the attacker is consuming the memory of the switch that is used to store the MAC address table. The MAC addresses of legitimate users will be pushed out of the MAC Table. Now the switch cannot deliver the incoming data to the destination system. So a considerable number of incoming frames will be flooded at all ports.
+The aim of the MAC Flooding is to takedown this MAC Table. In a typical MAC Flooding attack, the attacker sends Ethernet Frames in a huge number. When sending many Ethernet Frames to the switch, these frames will have various sender addresses. The intention of the attacker is consuming the memory of the switch that is used to store the MAC address table. The MAC addresses of legitimate users will be pushed out of the MAC Table. Now the switch cannot deliver the incoming data to the destination system. So a considerable number of incoming frames will be flooded at all ports.
 
 MAC Address Table is full and it is unable to save new MAC addresses. It will lead the switch to enter into a fail-open mode and the switch will now behave like a network hub. It will forward the incoming data to all ports broadcasting it.
 
@@ -290,6 +290,6 @@ Best practices against sniffing include the following approaches to protect the 
 
 * **Ping method**: Ping technique can be used to detect sniffers but, been an older technique is not very reliable. A ping request is sent to the suspicious IP address, if it is running in promiscuous mode it will respond.
 
-* **ARP method**: Using ARP, sniffers can be detected with the help of the cache. By sending a non-broadcast ARP package to the suspect, the MAC address will be cached if the NIC is running in promiscuous mode. Next step is to send a broadcast ping with spoofed address. If the machine is running in promiscuous mode, it will be able to reply to the packet only as it has already learned the actual MAC from the sniffed non-broadcast ARP packet.
+* **ARP method**: Using ARP, sniffers can be detected with the help of the cache. By sending a non-broadcast ARP package to the suspect, the MAC address will be cached if the NIC is running in promiscuous mode. Next step is to send a broadcast ping with the spoofed address. If the machine is running in promiscuous mode, it will be able to reply to the packet only as it has already learned the actual MAC from the sniffed non-broadcast ARP packet.
 
 * **Promiscuous Detection Tool**: Promiscuous detection tools like Nmap can also be used to detect NIC running in promiscuous mode.

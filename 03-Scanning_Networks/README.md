@@ -194,7 +194,7 @@ ACK flag probe is also used to determine the filtering rules of the target netwo
 
 ##### IDLE/IPID Header Scan
 
-IDLE/IPID header scan works by sending a spoofed source address to the target to determine which services are available. In this scan, attackers use IP address of a zombie machine for sending out the packets. Based on the IPID of the packer (fragment identification number), it is possible to determine whether the port is open or closed.
+IDLE/IPID header scan works by sending a spoofed source address to the target to determine which services are available. In this scan, attackers use the IP address of a zombie machine for sending out the packets. Based on the IPID of the packer (fragment identification number), it is possible to determine whether the port is open or closed.
 
 Idle scans take advantage of predictable Identification field value from IP header: every IP packet from a given source has an ID that uniquely identifies fragments of an original IP datagram; the protocol implementation assigns values to this mandatory field generally by a fixed value increment. Because transmitted packets are numbered in a sequence you can say how many packets are transmitted between two packets that you receive.
 
@@ -302,7 +302,7 @@ Proxy chaining is a basic technique that makes use of multiple proxy servers to 
 
 ### Anonymisers
 
-An anonymiser is a tool that completely hides or removes identity-related information to make an activity untraceable. The basic purposes of using anonymisers are:
+An anonymiser is a tool that completely hides or removes identity-related information to make activity untraceable. The basic purposes of using anonymisers are:
 
 * Minimising risk
 * Identity theft prevention

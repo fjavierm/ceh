@@ -37,3 +37,5 @@ This text is a compilation of my thoughts, information that I have collected or 
 * [CloudFlare Learning](https://www.cloudflare.com/learning)
 * [Prilege Escalation](https://www.netsparker.com/blog/web-security/privilege-escalation/)
 * [ENISA](https://www.enisa.europa.eu/topics/csirts-in-europe/glossary)
+* [OWASP Community Pages](https://owasp.org/www-community/)
+* [Rapid7 Blog](https://blog.rapid7.com)

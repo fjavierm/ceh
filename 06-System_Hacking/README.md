@@ -232,8 +232,11 @@ Spyware is used for many purposes. Usually, it aims to track and sell users inte
 The most common types of spyware are:
 
 * **Adware**: This type of spyware tracks browser history and downloads, with the intent of predicting what products or services users are interested in. The adware will display advertisements for the same or related products or services to entice users to click or make a purchase. Adware is used for marketing purposes and can slow down computers.
-* **System monitors**: This type of spyware can capture just about everything users do on their computers. System monitors can record all keystrokes, emails, chat-room dialogues, websites visited, and programs run. System monitors are often disguised as freeware. 
+
+* **System monitors**: This type of spyware can capture just about everything users do on their computers. System monitors can record all keystrokes, emails, chat-room dialogues, websites visited, and programs run. System monitors are often disguised as freeware.
+
 * **Tracking cookies**: These track the user's web activities, such as searches, history, and downloads, for marketing purposes.
+
 * **Trojans**: This kind of malicious software disguises itself as legitimate software. For example, Trojans may appear to be a Java or Flash Player update upon download. Trojan malware is controlled by third parties. It can be used to access sensitive information such as Social Security numbers and credit card information.
 
 Some of the spyware features are:
