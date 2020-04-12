@@ -226,7 +226,7 @@ A multi-homed firewall is a firewall that has more than one network interface, w
 
 ![Multi-homed architecture](img/03_multi-homed_architecture.png)
 
-### Demilitarised Zone
+### Demilitarized Zone
 
 A DMZ network functions as a subnetwork containing an organization's exposed, outward-facing services. It acts as the exposed point to an untrusted network, commonly the Internet.
 
@@ -279,5 +279,79 @@ Several honeypot technologies in use include the following:
 * **Client honeypots**: Most honeypots are servers listening for connections. Client honeypots actively seek out malicious servers that attack clients, monitoring for suspicious and unexpected modifications to the honeypot. These systems generally run on virtualization technology and have a containment strategy to minimize risk to the research team.
 
 * **Honeynets**: Rather than being a single system, a honeynet is a network that can consist of multiple honeypots. Honeynets aim to strategically track the methods and motives of an attacker while containing all inbound and outbound traffic.
+
+## Evading IDS
+
+### Insertion Attacks
+
+IDSs can accept packets that end-systems reject. IDSs that do this make the mistake of believing that end-systems have accepted and processed the packet when they actually have not. Attackers can exploit this condition by sending packets to end-systems that they will reject, but that IDSs will think are valid. By doing this, the attackers are "_inserting_" data into IDSs, no other systems on the network care about the bad packets. Attackers can use insertion attacks to defeat signature analysis, allowing them to slip attacks past IDSs.
+
+Taking advantage of a vulnerability attackers can insert packets with a bad checksum or TTL values and send them out of order. IDSs and end hosts, when reassembling the packet, they might have two different streams. For example, attackers may send the following stream:
+
+![Insertion Attack](img/04_insertion_attack.png)
+
+### Evasion
+
+End-systems can accept packets that an IDSs reject. IDSs that mistakenly reject such a packet miss their content entirely. This condition can also be exploited, this time by slipping crucial information past the IDSs in packets that IDSs is too strict about processing. These packets are '_evading_' the scrutiny of IDSs.
+
+We call these '_evasion_' attacks, and they are the easiest to exploit and most devastating to the accuracy of IDSs. Entire sessions can be carried forth in packets that evade an IDS, and blatantly obvious attacks couched in such sessions will happen right under the nose of even the most sophisticated analysis engines.
+
+Evasion attacks foil pattern matching in a manner quite similar to insertion attacks. Again, attackers cause IDSs to see a different stream of data than the end-system, this time, however, end-systems see more than IDSs, and the information that IDSs miss is critical to the detection of an attack.
+
+![Evasion](img/05_evasion.png)
+
+### Fragmentation Attack
+
+IP fragmentation is the process of dividing packets into smaller chunks. These need to be of a specific size so that the receiving parties could process them and transfer data successfully. All these packets are then reassembled by the receiving party so they can understand the data they got.
+
+This technique is usually adopted when IDSs and hosts have different timeout configured. For example, a host with a 20 seconds timeout and an IDS with 10 seconds. If attackers send packets with 15 seconds delays, they will not be reassembled at the IDS but they will be at the host.
+
+Similarly, overlapping fragments can be sent configuring their TCP sequence as overlapped. The reassembly of these overlapping packets will depend on how the operative system is configured to perform this action.
+
+### Denial-of-Service
+
+Passive IDSs devices are configured ad '_Fail-Open_'. Taking advantage of this limitation, attackers can run a DoS attack to overload an IDS system. They can target the CPU or memory by sending specially crafted packets or a large number of fragmented out-of-order packets.
+
+### Obfuscation
+
+Obfuscation is the encryption of the payload in a way that an IDS cannot reserve the encryption but the final system can. Encrypted protocols are not inspected by IDSs unless they have the private key configured. Similarly, attackers can use polymorphic shellcodes to create unique patterns to evade IDSs.
+
+### False Positive Generation
+
+Attackers can generate a large number of false-positive alerts trying to hide the malicious packet with in the noise.
+
+### Unicode Evasion Technique
+
+In this case, attackers can use Unicode, a form of character encoding, to evade IDSs inspection. Converting a string to Unicode characters can avoid signature matching and alerts in the IDSs.
+
+## Evading Firewalls
+
+### Firewall Identification
+
+The identification of firewalls includes firewall fingerprinting to obtain sensitive information such as open ports, version information, services running, etc. Different techniques can be used among the ones the next can be found:
+
+* ***Port Scanning**: Special packets can be sent to particular hosts to analyse the responses and infer information about the environment, specially open ports.
+
+* **Fire-walking**: Is a technique that using ICMP packets finds out the location of the firewall and allows to map a network by probing the ICMP echo request with TTL values exceeding one by one. It helps to find the number of hoops.
+
+* **Banner Grabbing**: The different devices that can be found in a network display different banner, vendor information, that can be identified and device and firmware can be extracted.
+
+* **IP Address Spoof**: Attackers can send packets with spoofed IP addresses to impersonate user machines and gain unauthorised access.
+
+* **Source Routing**: This technique sends a spoofed packet using a specific route that mimics the legitimate user path.
+
+### By-Passing Techniques
+
+* **By-passing blocked sites using IP addresses**: Instead of the use of an URL and its domain to access it, attackers can try to access using its IP address if this type of access is not blocked.
+
+* **By-passing blocked sites using proxies**: The use of proxies to access restricted websites is very common hiding the real IP and using the proxy IP address to access the website.
+
+* **By-passing through ICMP tunnelling method**: ICMP tunnelling is a technique of injecting arbitrary data in the payload of an echo packet and forwarded to the target host. In this scenario, a TCP connection is tunnelled over ping requests and replays because firewalls do not examined the payload field of ICMP packets.
+
+* **By-passing through HTTP tunnelling method**: It is taking advantage of a legitimate HTTP server deployed, encapsulating data into the HTTP traffic and using services as FTP.
+
+* **By-passing through SSH tunnelling method**: An attacker can use OpenSSH to encrypt the traffic and avoid the detection by security devices.
+
+* **By-passing through external systems**: This process involves to hijack the session of a valid user with permissions to connect to external networks and using that session to by-pass the firewall.
 
 // TODO Tools: snort
