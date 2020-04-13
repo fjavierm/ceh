@@ -20,7 +20,7 @@ It is the person responsible of the management and configuration required for th
 
 Clients are designed to interact with the web applications and they can range from simple dummy clients to very complex ones.
 
-### Web Application Threats
+### Web Application Threats
 
 Multiple different threats apply to web applications:
 
@@ -119,4 +119,5 @@ One of the tools security professionals have to prevent attacks is pentesting. I
 There are literally hundreds of things that can be done to try to mitigate web application attacks. They can not be just listed but, a great starting point could be the [OWASP Top 10 project](https://owasp.org/www-project-top-ten/) where are explained to top ten more common vulnerabilities, how they work and possible ways to mitigate them.
 
 // TODO Review this chapter: Cloud, CI, DevOps practices, everything feels obsolete
+
 // TODO re-sort, the way the information is exposed seems messy
