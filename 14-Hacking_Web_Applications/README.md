@@ -1,6 +1,6 @@
 # Hacking Web Applications
 
-Hundreds, thousands, millions, billions of systems are online nowadays, they offer services to their users and, in some cases, i.e. critical systems, they are indispensable. Some of these online services are web applications and web servers. Organisations have embraced them and, they are not just used in the corporate sector to perform important and, some times, critical tasks, they have expanded globally for social and entertainment purposes.
+Hundreds, thousands, millions, billions of systems are online nowadays, they offer services to their users and, in some cases, i.e. critical systems, they are indispensable. Some of these online services are web applications running on web servers. Organisations have embraced them and, they are not just used in the corporate sector to perform important and, some times, critical tasks, they have expanded globally for social and entertainment purposes.
 
 Web applications present a great security challenge. They need high availability and smooth performance but, they are always exposed to a big number of users. For all these reasons, ensure security measures and eliminate vulnerabilities is crucial.
 
