@@ -99,7 +99,7 @@ One of the tools security professionals have to prevent attacks is pentesting. I
     * Session attacks
     * Passwords attacks
 
-* **Authorisation attack schemes**: Using different techniques to manipulate URLs, requests, POST data, query strings, cookies, parameters, HTTP headers, etc. to escalate privileges once a low-level access has been achieved.
+* **Authorisation attack schemes**: Using different techniques to manipulate URLs, requests, POST data, query strings, cookies, parameters, HTTP headers, etc. to escalate privileges once low-level access has been achieved.
 
 * **Session management attack**: There are different techniques that can be used to impersonate a legitimate user:
 
