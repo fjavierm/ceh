@@ -56,7 +56,7 @@ Terrestrial GSM networks now cover more than 90% of the world's population. GSM 
  ## Wireless Standards
 
  | Standard | Frequency | Modulation | Speed |
- |:-!:-|:-|:-|
+ |:-|:-|:-|:-|
  | 802.11a | 5 GHz | OFDM | 54 Mbps |
  | 802.11b | 2.4 GHz | DSSs | 11 Mbps |
  | 802.11g | 2.4 GHz | OFDM, DSSS | 54 Mbps |
@@ -213,5 +213,72 @@ WPA2 replaced WPA. Certification began in September, 2004 and from March 13, 200
 
 * **Launch wireless attacks**: Using a tool like _Aircrack-ng_ to run one or multiple of the possible attacks against a wireless network.
 
-## Bluetooth HAcking
+## Bluetooth Hacking
 
+Bluetooth is a wireless technology which is found in pretty much every phone you can get your hands on. But it is also in many other devices and gadgets around the home and the office, such as laptops, speakers, headphones and more. Bluetooth is used to connect devices that are in close proximity, cutting down on cables and giving you flexibility and freedom. Bluetooth is designed to allow devices to communicate wirelessly with each other over relatively short distances. It typically works over a range of less than 100 meters. The range has been intentionally limited in order to keep its power drain to a minimum. Bluetooth operates at 2.4 GHz frequency.
+
+Bluetooth has a discovery feature that enables devices to be discoverable by other Bluetooth devices.
+
+### Bluetooth Attacks
+
+* **BlueSmacking**: Basically, a DoS attack against a Bluetooth device overflowing it with random packets, for example, echo packets.
+
+* **BlueBugging**: In this type of attacks, attackers exploit devices to again access and compromise its security.
+
+* **BlueJacking**: It is the art of sending unsolicited messages to Bluetooth enabled devices.
+
+* **BluePrinting**: It is a method or technique to extract information and details about a remote device. Information such as firmware, manufacturers information, model, etc.
+
+* **BlueSnarfing**: Exploiting security vulnerabilities, attackers steal the information on Bluetooth devices.
+
+### Bluetooth Countermeasures
+
+* Keep checking paired devices list.
+* Keep devices in non-discoverable mode.
+* Use a strong ping pattern.
+* Use encryption.
+* Install host-based security.
+* Do not accept unknown or suspectable request.
+* When idle, keep your Bluetooth disabled.
+
+## Wireless Security Tools
+
+### Wireless Intrusion Prevention Systems
+
+A wireless intrusion prevention system (WIPS) operates at the Layer 2 (data link layer) level of the Open Systems Interconnection model. WIPS can detect the presence of rogue or misconfigured devices and can prevent them from operating on wireless enterprise networks by scanning the network’s RFs for denial of service and other forms of attack.
+
+WIDS monitors the radio spectrum for the presence of unauthorized, rogue access points and the use of wireless attack tools. The system monitors the radio spectrum used by wireless LANs, and immediately alerts a systems administrator whenever a rogue access point is detected. Conventionally it is achieved by comparing the MAC address of the participating wireless devices.
+
+### Wi-Fi Security Auditing Tool
+
+There are several tools that can use defenders to audit, troubleshoot, detect, prevent intrusions, mitigate threats, detect rogue, protect against day-zero threats, investigate incidents (forensics) and create compliance reports helping to protect wireless networks. Tools like:
+
+* AirMagnet Wi-Fi Analyser
+* Motorola's AirDefens Service Platform (ADSP)
+* Cisco Adaptive Wireless IPS
+* Aruba RFProtect
+
+In addition, SANS has a whitepaper with the tittle:
+
+ _[Wireless Network Audits using Open Source tools](https://www.sans.org/reading-room/whitepapers/auditing/wireless-network-audits-open-source-tools-1235)_
+
+ ## Countermeasures
+
+ Multiple techniques and practices can be tacking to prevent attacks on wireless networks, some of them already discussed previously such as using monitoring and auditing tools, configuring strict access control policies, following best practices and techniques and, using appropriate encryption like WPA2 and strong authentication. Some of these basic techniques are:
+
+ * Access point scanning
+ * Change default parameters
+ * Disable remote login for wireless devices
+ * Wireless IPS deployment
+ * Configuring WPA2 with AES for data protection
+ * Choose strong passwords
+ * RF scanning
+ * MAC filtering
+ * Disable SSID broadcast
+ * Update software and patches
+ * Blocking rogue access points
+ * Per-packet authentication
+ * Strong authentication
+ * Enable firewall protection
+ * Network management software
+ 

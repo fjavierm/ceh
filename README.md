@@ -40,3 +40,4 @@ This text is a compilation of my thoughts, information that I have collected or 
 * [OWASP Community Pages](https://owasp.org/www-community/)
 * [Rapid7 Blog](https://blog.rapid7.com)
 * [Barracuda Glossary](https://www.barracuda.com/glossary)
+* [SANS Reading Room](https://www.sans.org/reading-room)
