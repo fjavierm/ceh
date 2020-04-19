@@ -19,12 +19,12 @@ I hope, if you have landed here, this document can be of any use for you.
 9. [Social Engineering](09-Social_Engineering/README.md)
 10. [Denial of Service](10-Denial_of_Services/README.md)
 11. [Session Hijacking](11-Session_Hijacking/README.md)
-12. Evading IDS, Firewalls, and Honeypots
-13. Hacking Web Servers
-14. Hacking Web Applications
-15. SQL Injection
-16. Hacking Wireless Networks
-17. Hacking Mobile Platforms
+12. [Evading IDS, Firewalls, and Honeypots](12-Evading_IDS_Firewall_and_Honeypots/README.md)
+13. [Hacking Web Servers](13-Hacking_Web_Servers/README.md)
+14. [Hacking Web Applications](14-Hacking_Web_Applications/README.md)
+15. [SQL Injection](15-SQL_Injection/README.md)
+16. [Hacking Wireless Networks](16-Hacking_Wireless_Networks/README.md)
+17. [Hacking Mobile Platforms](17-Hacking_Mobile_Platforms/README.md)
 18. IoT Hacking
 19. Cloud Computing
 20. Cryptography
