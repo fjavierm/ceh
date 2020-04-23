@@ -207,7 +207,7 @@ The on-site MDM deployment has the next components or areas:
 
 #### Cloud-based MDM deployment
 
-In this type of deployment the MDM software is installed and managed by a third-party service and, this is one of the best advantages of this type due to the maintenance and troubleshooting been responsibility of the service provider.
+In this type of deployment the MDM software is installed and managed by a third-party service and, this is one of the best advantages of this type due to the maintenance and troubleshooting been the responsibility of the service provider.
 
 The cloud-based MDM deployment has the next components or areas:
 
@@ -227,3 +227,62 @@ The cloud-based MDM deployment has the next components or areas:
 
 ## Bring Your Own Device (BYOD)
 
+The BOYD concept makes life easier for users but represent some new challenges for network engineers and designers. Network engineers and designers need to find a way to balance the constant mutation of their networks and the offering of seamless wireless connectivity with maintaining good security for organisations.
+
+Some reason to implement BYOD solutions are:
+
+* **A wide variety of consumer devices**: Smartphones, tablets, laptops and others of multiple brands and types belonging to users need to be, nowadays, added to the network and, they need to complain with organisation's policies and, of course, have all the connectivity.
+
+* **No schedules**: Not any more strict working hours, users can join a network when is convenient for them early, late, launch time even weekends.
+
+* **Deslocalisation**: Not just working from offices buildings or corporative environments, users can now connect from everywhere and have the need to access to the company resources.
+
+### BYOD Architecture Framework
+
+Some elements that can be found in BYOD environments are:
+
+* **BYOD devices**: All the devices allowed to connect to the corporate network to allow users to perform their job.
+
+* **Wireless access points**: They provide wireless connectivity on-premises and they are installed in the physical network of a company.
+
+* **Wireless LAN controllers**: WLAN controllers provide centralised management and monitoring of the WLAN solution. They are integrated with the identity service engine to enforce the authentication and authorisation of the BYOW devices.
+
+* **Identity service engine**: They implement the authentication, authorisation and accounting for end-points devices.
+
+* **VPN solutions**: They provide connectivity to corporate networks for end-users allowing confidentiality of data.
+
+* **Integrated services router (ISR)**: Prefered in BYOD architectures to provide WAN and Internet access in corporate environments to BYOD devices.
+
+* **Aggregation services router (ASR)**: It provide WAN and Internet access in corporate environments and act as aggregation points for connections coming from the branches and home-offices.
+
+* **Cloud web security (CWS)**: It provides enhanced web security for all BYOD devices that access the Internet using public 3G/4G networks.
+
+* **Adaptive security appliance (ASA)**: It provides standard security solutions at the Internet edge like IDS or IPS and acts as a termination point for the VPN connections.
+
+* **RSA secureID**: It provides one-time passwords to access the network applications for BYOD devices.
+
+* **Active Directory**: It provides central command and control of domain users, computers and network printers. It restrict access to network resources.
+
+* **Certificate authority**: It allows to provide access to the network only to BYOD devices that has a valid certificate installed.
+
+## Mobile Security Guidelines
+
+Mobil devices have a big amount of in-build security features and measures, this together with tools available on the Stores can craft good security but, in addition, some beneficial guidelines to secure mobile phones are as follows:
+
+* Avoid auto-upload of files and photos.
+* Perform security assessments of applications.
+* Turn off the Bluetooth.
+* Allow only necessary GSP-enabled applications.
+* Do not connect to open networks or public networks unless it is necessary.
+* Install applications for trusted or official stores.
+* Configure strong passwords.
+* Use mobile device management software.
+* Use remote wipe services.
+* Update operative systems.
+* Do not allow rooting/jailbreaking.
+* Encrypt your phone.
+* Periodic backups.
+* Filter emails.
+* Configure application certification rules.
+* Configure mobile device policies.
+* Configure auto-lock.
