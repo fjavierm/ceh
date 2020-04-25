@@ -25,9 +25,9 @@ I hope, if you have landed here, this document can be of any use for you.
 15. [SQL Injection](15-SQL_Injection/README.md)
 16. [Hacking Wireless Networks](16-Hacking_Wireless_Networks/README.md)
 17. [Hacking Mobile Platforms](17-Hacking_Mobile_Platforms/README.md)
-18. IoT Hacking
-19. Cloud Computing
-20. Cryptography
+18. [IoT Hacking](18-IoT_Hacking/README.md)
+19. [Cloud Computing](19-Cloud_Computing/README.md)
+20. [Cryptography](20-Cryptography/README.md)
 
 ## Information references
 
@@ -41,3 +41,4 @@ This text is a compilation of my thoughts, information that I have collected or 
 * [Rapid7 Blog](https://blog.rapid7.com)
 * [Barracuda Glossary](https://www.barracuda.com/glossary)
 * [SANS Reading Room](https://www.sans.org/reading-room)
+* [Cloud Computing Cyber-attacks](https://www.apriorit.com/dev-blog/523-cloud-computing-cyber-attacks)

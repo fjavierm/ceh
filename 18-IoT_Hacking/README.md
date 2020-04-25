@@ -133,4 +133,3 @@ Countermeasures include:
 * secure password recovery
 * Two-factor authentication
 * Disable UPnP
-
