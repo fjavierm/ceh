@@ -173,4 +173,138 @@ Secure shell protocol consist of three major components:
 
 * The Connection Protocol (SSH-CONNECT) multiplexes the encrypted tunnel into several logical channels. It runs over the user authentication protocol.
 
-## Cryptography Tools
+## Public Key Infrastructure
+
+Public Key Infrastructure (PKI) is a combination of policies, procedures, hardware, software and people that are required to create, manage and revoke digital certificates.
+
+### Public and Private Key Pair
+
+Public and private keys work as a pair to enforce the encryption and decryption process. The public key can be provide to anyone and the private key must be keep it secret.
+
+Both encryption/decryptions are valid, using the public key to encrypt and the private key to decrypt or the opposite, where the private key is used for encryption and the public key for decryption. Both ways have different applications.
+
+### Certification Authorities
+
+Certification Authorities (CA) is a computer or entity that creates and issues digital certificates. Information like IP address, fully qualified domain name and the public key are present on these certificates. CAs also assign serial numbers to the digital certificates and sign the certificate with its digital signature.
+
+### Root Certificate
+
+Root certificates provide the public key and other details of CAs. Different OS store root certificates in different ways.
+
+### Identity Certificate
+
+The purpose of identity certificates is similar to root certificates but they cover client computers or devices. For example, a router or a web server that want to make SSL connections with other peers.
+
+### Signed Certificate Vs. Self-Signed Certificate
+
+A self-signed certificate is a public key certificate that is signed and validated by the same person. It means that the certificate is signed with its own private key and is not relevant to the organization or person identity that does sign process.
+
+A signed certificate is supported by a reputable third-party certificate authority (CA). The issue of a signed certificate requires verification of domain ownership, legal business documents, and other essential technical perspectives. To establish a certificate chain, certificate authority also itself issues a certificate a root certificate.
+
+## Email Encryption
+
+### Digital Signature
+
+The digital signature is used to validate the authenticity of digital documents. Digital signatures ensure the author of the document, the date and time of signing and authenticate the content of the message.
+
+There are two categories of digital signatures:
+
+* **Direct digital signature**: The Direct Digital Signature is only include two parties one to send a message and another one to receive it. According to direct digital signature both parties trust each other and knows there public key. The message are prone to get corrupted and the sender can declines about the message sent by him any time.
+
+* **Arbitrated Digital Signature**: The Arbitrated Digital Signature includes three parties in which one is the sender, second is the receiver and the third is the arbiter who will become the medium for sending and receiving the message between them. The message are less prone to get corrupted because of timestamp being included by default.
+
+### Secure Sockets Layer
+
+Secure Sockets Layer (SSL) is a standard security technology for establishing an encrypted link between a server and a client—typically a web server (website) and a browser, or a mail server and a mail client (e.g., Outlook).
+
+SSL allows sensitive information such as credit card numbers, social security numbers, and login credentials to be transmitted securely. Normally, data sent between browsers and web servers is sent in plain text—leaving you vulnerable to eavesdropping. If an attacker is able to intercept all data being sent between a browser and a web server, they can see and use that information.
+
+More specifically, SSL is a security protocol. Protocols describe how algorithms should be used. In this case, the SSL protocol determines variables of the encryption for both the link and the data being transmitted.
+
+All browsers have the capability to interact with secured web servers using the SSL protocol. However, the browser and the server need what is called an SSL Certificate to be able to establish a secure connection.
+
+### SSL and TLS for Secure Communication
+
+A popular implementation of public-key encryption is the Secure Sockets Layer (SSL). Originally developed by Netscape, SSL is an Internet security protocol used by Internet browsers and Web servers to transmit sensitive information. SSL has become part of an overall security protocol known as Transport Layer Security (TLS).
+
+TLS and its predecessor SSL make significant use of certificate authorities. Once your browser requests a secure page and adds the "_s_" onto "_http_", the browser sends out the public key and the certificate, checking three things:
+
+1. The certificate comes from a trusted party.
+2. The certificate is currently valid.
+3. The certificate has a relationship with the site from which it is coming.
+
+The following are some important functionalities SSL/TLS has been designed for:
+
+* Server authentication to client and vice versa.
+* Select a common cryptographic algorithm.
+* Generate shared secrets between peers.
+* Protection of normal TCP/UDP connection.
+
+#### How SSL/TLS works
+
+These are the essential principles to grasp for understanding how SSL/TLS works:
+
+* Secure communication begins with a TLS handshake, in which the two communicating parties open a secure connection and exchange the public key.
+
+* During the TLS handshake, the two parties generate session keys, and the session keys encrypt and decrypt all communications after the TLS handshake.
+
+* Different session keys are used to encrypt communications in each new session.
+
+* TLS ensures that the party on the server-side, or the website the user is interacting with, is actually who they claim to be.
+
+*TLS also ensures that data has not been altered, since a message authentication code (MAC) is included with transmissions.
+
+With TLS, both HTTP data that users send to a website (by clicking, filling out forms, etc.) and the HTTP data that websites send to users is encrypted. Encrypted data has to be decrypted by the recipient using a key.
+
+#### TLS handshake
+
+TLS communication sessions begin with a TLS handshake. A TLS handshake uses something called asymmetric encryption, meaning that two different keys are used on the two ends of the conversation. This is possible because of a technique called public-key cryptography.
+
+In public-key cryptography, two keys are used: a public key, which the server makes available publicly, and a private key, which is kept secret and only used on the server-side. Data encrypted with the public key can only be decrypted with the private key, and vice versa.
+
+During the TLS handshake, the client and server use the public and private keys to exchange randomly generated data, and this random data is used to create new keys for encryption, called the session keys.
+
+### Pretty Good Privacy
+
+Pretty Good Privacy (PGP) is a type of encryption program for online communication channels. The method was introduced in 1991 by Phil Zimmerman, a computer scientist and cryptographer. PGP offers authentication and privacy protection in files, emails, disk partitions and digital signatures and has been dubbed as the closest thing to military-grade encryption. PGP encrypts the contents of e-mail messages using a combination of different methods. PGP uses hashing, data compression, symmetric encryption, and asymmetric encryption. In addition to e-mail encryption, PGP also supports the use of a digital signature to verify the sender of an e-mail.
+
+OpenPGP is the most widely applied standard when it comes to modern PGP practices. OpenPGP programs allow users to encrypt private and confidential messages before uploading or downloading content from a remote server. This prevents cybersecurity threats from the open channels of the Internet.
+
+## Disk Encryption
+
+The disk encryption covers the encryption of disk to secure files and directories by converting them into an encrypted format. Disk encryption encrypts every bit on a disk to prevent unauthorised access to data storage.
+
+The standard process for booting up an operating system is that the first section of the disk, called the master boot record, instructs the system where to read the first file that begins the instructions for loading the operating system.
+
+When disk encryption is installed, the contents of the disk, except the master boot record and a small system that it loads, are encrypted using any suitable modern symmetric cypher by a secret key. The master boot record is modified to first load this small system, which can validate authentication information from the user.
+
+## Cryptography Attacks
+
+Cryptographic attacks aim to recover the recover encryption keys. The process of finding vulnerabilities in code, encryption algorithms or key management schemes is called _Cryptopanalysis_.
+
+There are different attacks that can be applied in order to recover an encryption key:
+
+* **Known-plaintext attacks**: They are applied when cryptoanalyst have access to the plaintext message and its corresponding cyphertext and seeks to discover a correlation between them.
+
+* **Cyphertext-only attacks**: Cryptoanalysts only have access to the cyphertexts and they try to extract the plain text or the key by analysing the text and trying to extract the plain text. Frequency analysis, for example, are a great tool for this.
+
+* **Chosen-plaintext attacks**: A chosen-plaintext attack (CPA) is a model for cryptanalysis which assumes that the attacker can choose random plaintexts to be encrypted and obtain the corresponding ciphertexts. The goal of the attack is to gain some further information which reduces the security of the encryption scheme. In the worst case, a chosen-plaintext attack could expose secret information after calculating the secret key. Two forms of chosen-plaintext attack can be distinguished:
+
+    * Batch chosen-plaintext attack, where the cryptanalyst chooses all plaintexts before any of them are encrypted. This is an unprofessional use of "chosen-plaintext attack".
+    * Adaptive chosen-plaintext attack, where the professional cryptanalyst makes a series of interactive queries, choosing subsequent plaintexts based on the information from the previous encryptions.
+
+* **Chosen-cypher text attacks**: A cryptanalyst can analyse any chosen ciphertexts together with their corresponding plaintexts. His goal is to acquire a secret key or to get as many information about the attacked system as possible.
+
+* **Adaptive-chosen-ciphertext attacks**: The adaptive-chosen-ciphertext attack is a kind of chosen-ciphertext attacks, during which an attacker can make the attacked system decrypt many different ciphertexts. This means that the new ciphertexts are created based on responses (plaintexts) received previously. The attacker can request decrypting of many ciphertexts.
+
+* **Adaptive-chosen-plaintext attacks**: An adaptive-chosen-plaintext attack is a chosen-plaintext attack scenario in which the attacker has the ability to make his or her choice of the inputs to the encryption function based on the previous chosen-plaintext queries and their corresponding ciphertexts.
+
+* **Rubber hose attacks**: The rubber hose attack is extracting secrets from people by use of torture or coercion. Other means is governmental and corporate influence over other sub-entities.
+
+### Code Breaking Methodologies
+
+Some examples of methodologies that can help to break encryptions are:
+
+* Brute force
+* One-timed pad
+* Frequency analysis

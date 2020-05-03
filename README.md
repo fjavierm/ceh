@@ -8,7 +8,7 @@ I hope, if you have landed here, this document can be of any use for you.
 
 ## Sections
 
-1. [Introduction to Ethical Hacking](01-Introduction_to-Ethical_Hacking/README.md)
+1. [Introduction to Ethical Hacking](01-Introduction_to_Ethical_Hacking/README.md)
 2. [Footprinting and Reconnaissance](02-Footprinting_and_Reconnaissance/README.md)
 3. [Scanning Networks](03-Scanning_Networks/README.md)
 4. [Enumeration](04-Enumeration/README.md)
