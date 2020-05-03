@@ -22,7 +22,7 @@ There are multiple system hacking methodologies that, at least, include the next
 4. Hiden files
 5. Covering tracks
 
-## Password Cracking
+## Password Cracking
 
 It is said that a secure system should base its strengthness on three factors:
 
@@ -41,7 +41,7 @@ The best defence against these cracking password techniques is to have a strong 
 * Numbers
 * At least, 8 characters length if not more
 
-### Types of Password Attacks
+### Types of Password Attacks
 
 #### Non-Electronic Attacks
 

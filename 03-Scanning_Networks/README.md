@@ -1,4 +1,4 @@
-# 3. Scanning Networks
+# Scanning Networks
 
 At this point, attackers have collected enough information about the target to take the next step, network scanning. In this phase, attackers will try to obtain concrete network information about the target resources. Things like:
 
@@ -298,9 +298,9 @@ A proxy server is basically another computer which serves as an intermediary thr
 
 #### Proxy Chaining
 
-Proxy chaining is a basic technique that makes use of multiple proxy servers to make harder to detect the real origin of the internet requests. Attackers connect to one server after the other to create a chain of proxy servers between them and the target system, making any effort of reverse tracing harder and harder the more proxy servers they have used. The downside of this technique is that connections are less stable and tend to slow down the traffic with every extra connection.
+Proxy chaining is a basic technique that makes use of multiple proxy servers to make harder to detect the real origin of the internet requests. Attackers connect to one server after the other to create a chain of proxy servers between them and the target system, making any effort of reverse tracing harder and harder the more proxy servers they have used. The downside of this technique is that connections are less stable and tend to slow down the traffic with every extra connection
 
-### Anonymisers
+### Anonymisers
 
 An anonymiser is a tool that completely hides or removes identity-related information to make activity untraceable. The basic purposes of using anonymisers are:
 

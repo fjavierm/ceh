@@ -132,7 +132,7 @@ RST Hijacking can be carried out using a packet crafting tool and TCP/IP analysi
 
 In this type of session hijacking, attackers do not see the target host's response to the transmitted requests. Attacker, being in a man-in-the-middle position, can only introduce malicious injections into the victim's data packets, blindly guessing their sequence numbers and without receiving confirmation of success. Nevertheless, blind hijacking can be used, for instance, to send a command to change/reset a password.
 
-### Force ICMP and ARP Spoofing
+### Force ICMP and ARP Spoofing
 
 A man-in-the-middle attack can also be performed by using forced ICMP packets and ARP spoofing techniques. Forced ICMP packets such as destination unavailable or high latency messages are sent to fool the victim.
 

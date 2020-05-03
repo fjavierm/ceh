@@ -32,7 +32,7 @@ They are servers where the code is available to the public and maintained by com
 * Lighttpd
 * Node.js
 
-### IIS Web Server
+### IIS Web Server
 
 Internet Information Service (IIS) is a windows-based service which provides a request processing architecture. IIS contains multiple components which are responsible for several functions such as listening to the request, managing processes, reading configuration files, etc. Some of these components are:
 

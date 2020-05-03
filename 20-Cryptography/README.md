@@ -256,7 +256,7 @@ These are the essential principles to grasp for understanding how SSL/TLS works:
 
 With TLS, both HTTP data that users send to a website (by clicking, filling out forms, etc.) and the HTTP data that websites send to users is encrypted. Encrypted data has to be decrypted by the recipient using a key.
 
-#### TLS handshake
+#### TLS handshake
 
 TLS communication sessions begin with a TLS handshake. A TLS handshake uses something called asymmetric encryption, meaning that two different keys are used on the two ends of the conversation. This is possible because of a technique called public-key cryptography.
 

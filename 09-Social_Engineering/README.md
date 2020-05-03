@@ -65,7 +65,7 @@ For these techniques, it is only necessary the online interaction.
 
 Phishing techniques address a fake email looking like a legitimate one to targets. When the targets interact with the email, they will be redirected to a fake page where they will be requested for some sensitive information.
 
-#### Spear Phishing
+#### Spear Phishing
 
 A spear-phishing attack targets a specific individual and it is tailored for that person. Usually, they are more difficult to create but, the rate of success is higher.
 
@@ -79,7 +79,7 @@ In this technique, attackers publish fake applications on app stores or similar 
 
 Here, attackers download a legitimate app, re-package it with some malware and re-upload the application to 3rd party stores. This is particularly done with very popular apps like games or anti-viruses. Users, maybe, are not aware of the application being available on legitimate stores or, they download a paid app from a free link intentionally or accidentally. When users supply their sensitive information this is sent to the attackers.
 
-#### Fake Security Apps
+#### Fake Security Apps
 
 Similar to the previous one but, in this case, usually, the download of the application is offered using a pop-up when the user is surfing the Internet.
 

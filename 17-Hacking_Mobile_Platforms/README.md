@@ -90,7 +90,7 @@ There are multiple Android security tools that can be found in the stores but, w
 
 // TODO Add some tools maybe
 
-## Hacking iOS
+## Hacking iOS
 
 iOS is the operative system developed by Apple for their iPhones and nowadays it can be found in other devices of the company like iPads and iPods. Together with Android, they are the two most popular operative systems for mobile devices.
 
@@ -100,7 +100,7 @@ Major versions of the operative system tend to be released yearly. Two of the ma
 
 A jailbreak is a form of rooting resulting in privilege scalation. Jailbreak is usually done to remove or bypass the factory default restrictions by using kernel patches or device customisation. Jailbreak allows root access to the device what allows users to install unofficial applications.
 
-#### Types of Jailbreak
+#### Types of Jailbreak
 
 * **Userland exploit**: This jailbreak allows _user-level_ access without scaling to about-level access.
 
@@ -108,7 +108,7 @@ A jailbreak is a form of rooting resulting in privilege scalation. Jailbreak is 
 
 * **Bootrom exploit**: This jailbreak allows _user-level_ and _boot-level_ access.
 
-#### Jailbreak Techniques
+#### Jailbreak Techniques
 
 * **Tethered Jailbreak**: A tethered jailbreak is one that temporarily pwns a handset for a single boot. After the device is turned off (or the battery dies), it cannot complete a boot cycle without the help of a computer-based jailbreak application and a physical cable connection between the device and the computer in question.
 
@@ -187,7 +187,7 @@ And provide some functions such as:
 
 Generally, there are two types of deployments:
 
-#### On-site MDM Deployment
+#### On-site MDM Deployment
 
 Involves the installation of MDM applications on local servers inside the corporate data centres or offices and its managed by local staff available on-premises.
 
@@ -205,7 +205,7 @@ The on-site MDM deployment has the next components or areas:
 
 * **Campus Building**: A distribution layer that acts as ingress/egress point for all traffic in a campus building, where users can connect using switches or wireless access points.
 
-#### Cloud-based MDM deployment
+#### Cloud-based MDM deployment
 
 In this type of deployment the MDM software is installed and managed by a third-party service and, this is one of the best advantages of this type due to the maintenance and troubleshooting been the responsibility of the service provider.
 
@@ -225,7 +225,7 @@ The cloud-based MDM deployment has the next components or areas:
 
 * **Branch offices**: This component is compromised of few routers acting as the focal point of ingress and egress traffic out of branch offices. USer can connect using access switches or wireless access points.
 
-## Bring Your Own Device (BYOD)
+## Bring Your Own Device (BYOD)
 
 The BOYD concept makes life easier for users but represent some new challenges for network engineers and designers. Network engineers and designers need to find a way to balance the constant mutation of their networks and the offering of seamless wireless connectivity with maintaining good security for organisations.
 
@@ -265,7 +265,7 @@ Some elements that can be found in BYOD environments are:
 
 * **Certificate authority**: It allows to provide access to the network only to BYOD devices that has a valid certificate installed.
 
-## Mobile Security Guidelines
+## Mobile Security Guidelines
 
 Mobil devices have a big amount of in-build security features and measures, this together with tools available on the Stores can craft good security but, in addition, some beneficial guidelines to secure mobile phones are as follows:
 

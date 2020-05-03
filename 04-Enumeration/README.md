@@ -123,7 +123,7 @@ In addition to these tools, `nmap` making use of its NSE script can execute NTP 
 
 The [Simple Mail Transfer Protocol](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) (SMTP) is a communication protocol for electronic mail transmission. As an Internet standard, SMTP was first defined in 1982 by RFC 821 and updated in 2008 by RFC 5321 to Extended SMTP additions, which is the protocol variety in widespread use today. Mail servers and other message transfer agents use SMTP to send and receive mail messages. SMTP servers commonly use the Transmission Control Protocol on port number 25.
 
-### SMTP Commands
+### SMTP Commands
 
 SMTP has multiple commands to make possible communication between users. By inspecting the different responses to this command, attackers can figure out which user ar valid or invalid. Some of these commands are:
 

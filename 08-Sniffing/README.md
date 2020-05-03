@@ -160,7 +160,7 @@ In a typical MAC spoofing sequence, the attacker:
 
 * **Legitimate uses of MAC spoofing**: An example of a legitimate use of MAC spoofing is changing the function of a single computer from router to computer and back to router through MAC spoofing. If you only have a single public IP, you can only hook up one unit directly (PC or router). If one has two WAN IPs, the MAC address of the two devices must be different.
 
-### How to Defend it
+### How to Defend it
 
 There are many tools and practices that organizations can employ to reduce the threat of spoofing attacks. Common measures that organizations can take for spoofing attack prevention include:
 
@@ -200,9 +200,9 @@ Similar to the previous one, proxy server DNS poisoning is performed by replacin
 
 Users tend to use the DSN servers provided by Internet Service Providers (ISP) but, organisations tend to have their own servers to improve performance by caching frequently or previously generated queries. Attackers can add or alter entries in the DNS record cache to redirect users to malicious sites. When an internal DNS server is unable to validate a DNS response from an authoritative DSN server, it updates the entry locally to entertain the user requests.
 
-### How to Defend it
+### How to Defend it
 
-#### Audit your DNS zones
+#### Audit your DNS zones
 
 First things first. The most important thing you will have to review apart from the DNS server main configuration is your DNS zone.
 

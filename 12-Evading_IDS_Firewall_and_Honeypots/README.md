@@ -340,7 +340,7 @@ The identification of firewalls includes firewall fingerprinting to obtain sensi
 
 * **Source Routing**: This technique sends a spoofed packet using a specific route that mimics the legitimate user path.
 
-### By-Passing Techniques
+### By-Passing Techniques
 
 * **By-passing blocked sites using IP addresses**: Instead of the use of an URL and its domain to access it, attackers can try to access using its IP address if this type of access is not blocked.
 

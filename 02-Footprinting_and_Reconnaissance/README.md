@@ -1,4 +1,4 @@
-# 2. Footprinting & Reconnaissance
+# Footprinting & Reconnaissance
 
 The footprinting phase allows an attacker to gather information regarding internal and external security architectures. The collection of information also helps to:
 

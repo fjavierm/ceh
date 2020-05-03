@@ -11,7 +11,7 @@ The second meaning of cloud computing describes how it works: a virtualized pool
 * Automated management
 * Virtualisation
 
-## Typed of Cloud Computing Services
+## Typed of Cloud Computing Services
 
 The array of available cloud computing services is vast, but most fall into one of the following categories:
 
@@ -150,7 +150,7 @@ Although equally buzz-worthy technologies, virtualization and cloud computing ar
 * Denial of service
 * Shared technology issues
 
-## Cloud Computing Attacks
+## Cloud Computing Attacks
 
 ### Cloud malware injection attacks
 
@@ -202,7 +202,7 @@ These two types of cyber attacks appeared earlier this year and have already bec
 
 Cloud computing security refers to the security implementations, deployment and preventions to defend against security threats.
 
-### Cloud Security Control Layers
+### Cloud Security Control Layers
 
 * **Application layer**: All the controls that can be added at application level including those that can be deployed together with an application like web applications firewalls and those included in the system development life cycle like code analysis, online secure transactions, script analysis, etc.
 
@@ -237,7 +237,7 @@ Responsibilities of a cloud service provider include:
 * Trusted platform module
 * Netflow and others
 
-### Cloud Service Consumer
+### Cloud Service Consumer
 
 Responsibilities of a cloud service consumer include:
 
