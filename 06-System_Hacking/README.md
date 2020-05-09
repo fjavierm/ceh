@@ -145,7 +145,7 @@ NTLM is a challenge-response authentication protocol which uses three messages t
 
 The NTLM authentication process can be observed in the image below
 
-![NTLM Authentication Process](img/022_ntlm_authentication.png)
+![NTLM Authentication Process](img/01_ntlm_authentication.png)
 
 Before Kerberos, Microsoft used NTLM technology. The biggest difference between the two systems is the third-party verification and stronger encryption capability in Kerberos. This extra step in the process provides a significant additional layer of security over NTLM.
 

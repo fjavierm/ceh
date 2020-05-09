@@ -33,7 +33,7 @@ TCP is connection-oriented, and a connection between client and server is establ
 
 Here it is shown the format of the TCP header:
 
-![TCP header](img/010_tcp_header.png)
+![TCP header](img/01_tcp_header.png)
 
 The field 'Flag' deserves a deeper analysis of the possible values that it can contain because some of the types of scanners we are going to see are closely related to them. We can find the next flag values:
 
@@ -48,13 +48,13 @@ The field 'Flag' deserves a deeper analysis of the possible values that it can c
 
 As named before, a TCP communication starts with a three-way handshake
 
-![Three-way handsake](img/011_tcp_3_way_handshake.png)
+![Three-way handsake](img/02_tcp_3_way_handshake.png)
 
 There are multiple network scanners that it will allow to use and send packets containing the different flags but, it is worth to say that there are some tools that can be used to handcraft packets. [Python](https://www.python.org), for example, using the [Scrapy](https://scrapy.org) library gives versatility to create them programmatically and the tool [hping3](https://tools.kali.org/information-gathering/hping3) can help with it too. This will allow attackers a more fine control when testing a firewall or doing advanced port scanning. Also, some low point of view is always instructive
 
 We can generate some packets with the flag SYN to do some port scanning:
 
-![SYN packet](img/012_sys_packet.png)
+![SYN packet](img/03_sys_packet.png)
 
 This test returns SYN/ACK if the communication has been accepted or RST/ACK if the port is closed or filtered. In this case, the destination port of the packet is open.
 
@@ -68,7 +68,7 @@ UDP uses a simple connectionless communication model with a minimum of protocol 
 
 In the same way, TCP packets have been generated with hping3, UDP packets can be generated with hping3:
 
-![UDP packet](img/013_udp_packet.png)
+![UDP packet](img/04_udp_packet.png)
 
 In this case, it is not possible to reach the server because its port 80 is using the TCP protocol.
 
@@ -122,15 +122,15 @@ hping3 has been already named but, it has not been listed the things that can be
 
 There is a variety of different scanning techniques that attackers can use to gather the desired information:
 
-![Scanning Techniques](img/014_scanning_techniques.png)
+![Scanning Techniques](img/05_scanning_techniques.png)
 
 ##### Full Open Scan
 
 In this type of scanner, the three-way handshake is initiated and completed. It is easy to detect and log by security devices. Does not require superuser privileges.
 
-![Full Scan - Response for Open Ports](img/015_fs_responses_for_open_ports.png)
+![Full Scan - Response for Open Ports](img/06_fs_responses_for_open_ports.png)
 
-![Full Scan -Response for Closed Ports](img/016_fs_responses_for_closed_ports.png)
+![Full Scan -Response for Closed Ports](img/07_fs_responses_for_closed_ports.png)
 
 To perform this type of scan with Nmap, the next command can be executed:
 
@@ -140,9 +140,9 @@ To perform this type of scan with Nmap, the next command can be executed:
 
 Half Open Scan is also known as stealth scan. This type of scan starts the three-way handshake but, once it has received an initial response that allows deciding if a port is open or closed, interrupts the handshake, making the scan more difficult to detect.
 
-![Stealth Scan - Response for Open Ports](img/017_ss_responses_for_open_ports.png)
+![Stealth Scan - Response for Open Ports](img/08_ss_responses_for_open_ports.png)
 
-![Stealth Scan - Response for Closed Ports](img/018_ss_responses_for_closed_ports.png)
+![Stealth Scan - Response for Closed Ports](img/09_ss_responses_for_closed_ports.png)
 
 To perform this type of scan with Nmap, the next command can be executed:
 
@@ -158,9 +158,9 @@ Probes with flags scan are known as Xmas scans. Probes without flags are known a
 
 Xmas scan works by sending a TCP frame with FIN, URG, and PUSH flags set to the target device. Based on the response, it is possible to determine whether the port is open or closed. If there is no response, then the port is open. If the response is RST, then the port is closed. It is important to note that this scan works only for UNIX hosts.
 
-![Xmas Scan - Response for Open Ports](img/019_xs_responses_for_open_ports.png)
+![Xmas Scan - Response for Open Ports](img/10_xs_responses_for_open_ports.png)
 
-![Xmas Scan - Response for Closed Ports](img/020_xs_responses_for_closed_ports.png)
+![Xmas Scan - Response for Closed Ports](img/11_xs_responses_for_closed_ports.png)
 
 To perform this type of scan with Nmap, the next command can be executed:
 
@@ -210,7 +210,7 @@ Since the zombie had to send the RST packet it will increment its IPID. This is 
 
 The method assumes that zombie has no other interactions: if there is any message sent for other reasons between the first interaction of the attacker with the zombie and the second interaction other than RST message, there will be a false positive.
 
-![IDLE/IPID Header Scan](img/021_idle_ipid_header_scan.png)
+![IDLE/IPID Header Scan](img/12_idle_ipid_header_scan.png)
 
 ##### UDP Scan
 
