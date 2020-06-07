@@ -211,13 +211,134 @@ There are some steps to define information security policies:
 
 ## Physical Security
 
+Physical security is an important part of Information Security as it is the first layer of protection. Physical security is the protection of personnel, hardware, software, networks and data from physical actions and events that could cause serious loss or damage to an enterprise, agency or institution. This includes protection from fire, flood, natural disasters, burglary, theft, vandalism and terrorism.
 
+Physical security has three important components:
 
+* **Access control**: Obstacles should be placed in the way of potential attackers and physical sites should be hardened against accidents, attacks or environmental disasters.
 
+* **Surveillance**: Physical locations should be monitored using surveillance cameras and notification systems
 
+* **Testing**: Disaster recovery policies and procedures should be tested on a regular basis to ensure safety and to reduce the time it takes to recover from disruptive man-made or natural disasters.
 
+## Incident Management
 
+Incident Response Management is the procedure and method of handling an incident that occurs. Similarly, in information security, incidents responses are the remediation actions or steps taken as a response of an incident. Its first goal is to restore a normal service operation as quickly as possible and to minimize the impact on business operations, thus ensuring that the best possible levels of service quality and availability are maintained.
 
+While responding to and incident, professionals collect shreds of evidence, information and clues that will be helpful to:
+
+* Prevention in the future
+* Tracking an attacker
+* Finding holes and vulnerabilities in the system
+
+### Incident Management Process
+
+The incident response management processes include:
+
+1. Preparation for incident response
+2. Detection and analysis of an incident response
+3. Classification of an incident and its prioritisation
+4. Notifications and announcements
+5. Containment
+6. Forensic investigation of the incident
+7. Eradication and recovery
+8. Post-incident activities
+
+### Responsibilities of Incident Response Teams
+
+An incident response team (IRT) or emergency response team (ERT) is a group of people who prepare for and respond to any emergency incident. This team is generally composed of specific members designated before an incident occurs. Its members ideally are trained and prepared to fulfil the roles required by the specific situation.
+
+Some of the responsibilities of this team are:
+
+* Take action according to an Incident Response Plan (IRP). If there is no plan or the plan is not applicable, the team will follow the leader instructions to perform coordinated actions.
+
+* Examination and evaluation of events, determination of damage or scope of an attack.
+
+* Document the event.
+
+* If required, take the support of external security professionals or consultants.
+
+* If required, take the support of local law enforcement.
+
+* Facts collection.
+
+* Reporting.
+
+A good series of articles can be found [here](https://www.hitachi-systems-security.com/blog/benefits-incident-response-plan/).
+
+## Vulnerability Assessment
+
+A vulnerability assessment is the process of examination, identification and analysis of a system or application. Through vulnerability assessments weaknesses and threats can be identified, scoped and extra security layers can be defined.
+
+### Types of Vulnerability Assessments
+
+1. Active assessment
+2. PAssive assessment
+3. Host-based assessment
+4. Internal assessment
+5. External assessment
+6. Network assessment
+7. Wireless network assessment
+8. Application assessment
+
+## Penetration Testing
+
+Penetration testing is the process of hacking a system with the permission of the owner to evaluate the security, hack value, target of evaluation (TOE), attacks, exploits, zero-day vulnerabilities and other components such as threats, vulnerabilities or daisy-chaining.
+
+Some of the objectives of penetration testing are:
+
+* To identify threats and vulnerabilities to organisations assets.
+* To provide a comprehensive assessment of policies, procedures, design and architecture.
+* To set remediation actions to secure them before they are used by attackers to breach security.
+* To identify what attackers can access to steal.
+* To identify what information can be theft and its use.
+* To test and validate the security protection and identify the need for any additional protection layer.
+* Modification and up-gradation of currently deployed security architectures.
+* To reduce the expense of IT security by enhancing the return of security investment (ROSI)
+
+### Red and Blue Teams
+
+Red teams are focused on penetration testing of different systems and their levels of security programs. They are there to detect, prevent and eliminate vulnerabilities.
+
+A red team imitates real-world attacks that can hit a company or an organization, and they perform all the necessary steps that attackers would use. By assuming the role of an attacker, they show organizations what could be backdoors or exploitable vulnerabilities that pose a threat to their cybersecurity.
+
+A blue team is similar to a red team in that it also assesses network security and identifies any possible vulnerabilities.
+
+But what makes a blue team different is that once a red team imitates an attacker and attacks with characteristic tactics and techniques, a blue team is there to find ways to defend, change and re-group defence mechanisms to make the incident response much stronger.
+
+### Types of Penetration Testings
+
+#### Black-Box Penetration Testing
+
+In a black-box engagement, the consultant does not have access to any internal information and is not granted internal access to the client's applications or network. It is the job of the consultant to perform all reconnaissance to obtain the sensitive knowledge needed to proceed, which places them in a role as close to the typical attacker as possible. This type of testing is the most realistic, but also requires a great deal of time and has the greatest potential to overlook a vulnerability that exists within the internal part of a network or application. A real-life attacker does not have any time constraints and can take months to develop an attack plan waiting for the right opportunity.
+
+#### Grey-Box Penetration Testing
+
+An engagement that allows a higher level of access and increased internal knowledge falls into the category of grey-box testing. Comparatively, a black-box tester begins the engagement from a strict external viewpoint attempting to get in, while the grey-box tester has already been granted some internal access and knowledge that may come in the form of lower-level credentials, application logic flow charts, or network infrastructure maps. Grey-box testing can simulate an attacker that has already penetrated the perimeter and has some form of internal access to the network.
+
+#### White-Box Penetration Testing
+
+The final category of testing is called white-box testing, which allows the security consultant to have complete open access to applications and systems. This allows consultants to view source code and be granted high-level privilege accounts to the network. The purpose of white-box testing is to identify potential weaknesses in various areas such as logical vulnerabilities, potential security exposures, security misconfigurations, poorly written development code, and lack-of-defensive measures. This type of assessment is more comprehensive, as both internal and external vulnerabilities are evaluated from a "behind the scenes" point of view that is not available to typical attackers.
+
+### Security Testing Methodologies
+
+There are some industry-leading penetration testing methodologies:
+
+* Open Web Application Security Project ([OWASP](https://owasp.org))
+
+* Open Source Security Testing Methodology Manual ([OSSTMM](https://www.isecom.org/research.html))
+
+* Information System Security Assessment Framework (ISSAF) *(No longer maintained but still relevant)*
+
+* EC-Council Licensed Penetration Tester (LPT) Methodology
+
+### Security Audits vs Vulnerability Assessments vs Penetration Testing
+
+* **Security audits**: Security audits are the evaluation of if all security measures are being followed by an organisation, department, etc. with no concern of threats or vulnerabilities.
+
+* **Vulnerability Assessment**: It is the evaluation or discovery of threats and vulnerabilities that may exploit, impact on performance or delivery of its services by an organisation.
+
+* **Penetration Testing**: It is the process of security assessment including not only security audits and vulnerability assessment but demonstrable attacks and their solutions and remediations.
 
 ## Types of Attackers
 
@@ -238,3 +359,19 @@ There are different types of attackers. The list of types of attackers can be ve
 * **State-sponsored hackers**: Individuals employed by the government to penetrate and gain top-secret information and to damage information systems of other governments.
 
 * **Hacktivist**: Individuals who promote a political agenda by hacking, especially by defacing or disabling websites.
+
+## Laws
+
+In addition to all the technical considerations, one very important thing that security professionals need to keep in mind is the different laws different countries have and the defined industry standards. Things like:
+
+* **Payment Card Industry Data Security Standard (PCI-DSS)**: It is a worldwide standard that was set up to help businesses process card payments securely and reduce card fraud. The achieves through enforcing tight controls surrounding the storage, transmission and processing of cardholder data that businesses handle.
+
+* **ISO/IEC 27001:2013**: It specifies the requirements for establishing, implementing, maintaining and continually improving an information security management system within the context of the organization. It also includes requirements for the assessment and treatment of information security risks tailored to the needs of the organization.
+
+* **Health Insurance Portability and Accountability Act (HIPAA)**: It establishes a national set of security standards for protecting certain health information that is held or transferred in electronic form.
+
+* **Sarbanes Oxley Act (SOX)**: It is a federal law that established sweeping auditing and financial regulations for public companies. It was created to help protect shareholders, employees and the public from accounting errors and fraudulent financial practices.
+
+* **Digital Millennium Copyright Act (DMCA)**: DMCA is a copyright regulation from the United State.
+
+* **Federal Information Security Management Act (FISMA)**: It is a United States federal law that made it a requirement for federal agencies to develop, document, and implement an information security and protection program.
