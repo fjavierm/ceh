@@ -107,9 +107,9 @@ Identify theft can be split in three steps:
 
 ## Social Engineering Countermeasures
 
-Social engineering can me mitigated by several methods:
+Social engineering can be mitigated by several methods:
 
-1. Educate yourself: As said before, training and self-awareness for users is one of the best thigs to invert on.
+1. Educate yourself: As said before, training and self-awareness for users is one of the best things to invert on.
 
 2. Be aware of the information you are releasing: Everything shared online when talking or creating a profile can be found by attackers.
 

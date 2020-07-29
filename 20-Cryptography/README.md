@@ -151,7 +151,7 @@ MD5 was designed by well-known cryptographer Ronald Rivest in 1991. In 2004, som
 
 #### Secure Hashing Algorithm (SHA)
 
-Secure Hash Algorithms (SHA) are a family of cryptographic functions designed to keep data secured. It works by transforming the data using a hash function: an algorithm that consists of bitwise operations, modular additions, and compression functions. The hash function then produces a fixed-size string that looks nothing like the original. These algorithms are designed to be one-way functions, meaning that once they’re transformed into their respective hash values, it is virtually impossible to transform them back into the original data. A few algorithms of interest are SHA-1, SHA-2, and SHA-3, each of which was successively designed with increasingly stronger encryption in response to hacker attacks. SHA-0, for instance, is now obsolete due to the widely exposed vulnerabilities.
+Secure Hash Algorithms (SHA) are a family of cryptographic functions designed to keep data secured. It works by transforming the data using a hash function: an algorithm that consists of bitwise operations, modular additions, and compression functions. The hash function then produces a fixed-size string that looks nothing like the original. These algorithms are designed to be one-way functions, meaning that once they are transformed into their respective hash values, it is virtually impossible to transform them back into the original data. A few algorithms of interest are SHA-1, SHA-2, and SHA-3, each of which was successively designed with increasingly stronger encryption in response to hacker attacks. SHA-0, for instance, is now obsolete due to the widely exposed vulnerabilities.
 
 SHA-1 produce 160-bits hashing values. SHA-2 is a group of different hashing including SHA-256, SHA-384 and SHA-512
 
@@ -252,7 +252,7 @@ These are the essential principles to grasp for understanding how SSL/TLS works:
 
 * TLS ensures that the party on the server-side, or the website the user is interacting with, is actually who they claim to be.
 
-*TLS also ensures that data has not been altered, since a message authentication code (MAC) is included with transmissions.
+* TLS also ensures that data has not been altered, since a message authentication code (MAC) is included with transmissions.
 
 With TLS, both HTTP data that users send to a website (by clicking, filling out forms, etc.) and the HTTP data that websites send to users is encrypted. Encrypted data has to be decrypted by the recipient using a key.
 
@@ -306,5 +306,5 @@ There are different attacks that can be applied in order to recover an encryptio
 Some examples of methodologies that can help to break encryptions are:
 
 * Brute force
-* One-timed pad
+* One-time pad
 * Frequency analysis

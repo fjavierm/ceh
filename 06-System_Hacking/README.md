@@ -61,7 +61,7 @@ Attackers perform password cracking by directly communicating with the victim ma
 
 * **Hash Injection**: A pass the hash attack is an exploit in which an attacker steals a hashed user credential and, without cracking it, reuses it to trick an authentication system into creating a new authenticated session on the same network.
 
-* **Phishing**: There's an easy way to hack: ask the user for his or her password. A phishing email leads the unsuspecting reader to a faked log in page associated with whatever service it is the hacker wants to access, requesting the user to put right some terrible problem with their security. That page then skims their password and the hacker can go use it for their own purpose.
+* **Phishing**: There is an easy way to hack: ask the user for his or her password. A phishing email leads the unsuspecting reader to a faked log in page associated with whatever service it is the hacker wants to access, requesting the user to put right some terrible problem with their security. That page then skims their password and the hacker can go use it for their own purpose.
 
 * **Malware**: A keylogger, or screen scraper, can be installed by malware which records everything users type or takes screenshots during a login process, and then forwards a copy of this file to hacker central.
 
@@ -129,7 +129,7 @@ In the SAM, each user account can be assigned a local area network (LAN) passwor
 
 In personal computers (PCs) not connected into a LAN and for which there is only one user, Windows asks for only one password when the system is booted up. This function can be disabled if the user does not want to enter authentication data every time the computer is switched on or restarted. The main purpose of the SAM in a PC environment is to make it difficult for a thief to access the data on a stolen machine. It can also provide some measure of security against online hackers.
 
-The user passwords are stored in a hashed format in a registry hive either as a LM hash or as a NTLM hash. Windows XP or later versions do not store the value of LM hash or, if it exceeds fourteen characters, it stores blank or a dummy value instead. This file can be found in `%SystemRoot%/system32/config/SAM` and is mounted on `HKLM/SAM`. This information is stored following the next format:
+The user passwords are stored in a hashed format in a registry hive either as an LM hash or as an NTLM hash. Windows XP or later versions do not store the value of LM hash or, if it exceeds fourteen characters, it stores blank or a dummy value instead. This file can be found in `%SystemRoot%/system32/config/SAM` and is mounted on `HKLM/SAM`. This information is stored following the next format:
 
 `username:userId:LMHash:NTLMHash:::`
 
@@ -143,7 +143,7 @@ NTLM is a challenge-response authentication protocol which uses three messages t
 2. Next, the server responds with `CHALLENGE_MESSAGE` which is used to establish the identity of the client.
 3. Finally, the client responds to the challenge with an `AUTHENTICATE_MESSAGE`.
 
-The NTLM authentication process can be observed in the image below
+The NTLM authentication process can be observed in the image below.
 
 ![NTLM Authentication Process](img/01_ntlm_authentication.png)
 
@@ -203,7 +203,7 @@ With vertical privilege escalation (also called privilege elevation), attackers 
 
 Once attackers gain unauthorised access to a system and escalate privileges, now the next step of the attacker is to execute malicious applications on the target system to "own" the system. Attackers goals are:
 
-* Installation of malware to collect information: To do this, tools like `RemoteExec`or `PDQ Deploy` can be used.
+* Installation of malware to collect information: To do this, tools like `RemoteExec` or `PDQ Deploy` can be used.
 * To set up a backdoor to maintain access.
 * To crack existing passwords.
 * To install keyloggers for monitoring or capture user actions: I the access has been physical, it can be a hardware keylogger attached to the physical machine, otherwise, it can be a software keylogger.
@@ -241,7 +241,7 @@ The most common types of spyware are:
 
 Some of the spyware features are:
 
-* Tracking users.
+* Tracking users
 * Monitoring user's activity
 * Record conversations
 * Blocking applications and services

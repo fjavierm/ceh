@@ -46,11 +46,11 @@ The field 'Flag' deserves a deeper analysis of the possible values that it can c
 | FIN | Tells de remote system about the end of the communication, close the connection gracefully |
 | RST | Reset a connection |
 
-As named before, a TCP communication starts with a three-way handshake
+As named before, a TCP communication starts with a three-way handshake.
 
 ![Three-way handsake](img/02_tcp_3_way_handshake.png)
 
-There are multiple network scanners that it will allow to use and send packets containing the different flags but, it is worth to say that there are some tools that can be used to handcraft packets. [Python](https://www.python.org), for example, using the [Scrapy](https://scrapy.org) library gives versatility to create them programmatically and the tool [hping3](https://tools.kali.org/information-gathering/hping3) can help with it too. This will allow attackers a more fine control when testing a firewall or doing advanced port scanning. Also, some low point of view is always instructive
+There are multiple network scanners that it will allow to use and send packets containing the different flags but, it is worth to say that there are some tools that can be used to handcraft packets. [Python](https://www.python.org), for example, using the [Scrapy](https://scrapy.org) library gives versatility to create them programmatically and the tool [hping3](https://tools.kali.org/information-gathering/hping3) can help with it too. This will allow attackers a more fine control when testing a firewall or doing advanced port scanning. Also, some low point of view is always instructive.
 
 We can generate some packets with the flag SYN to do some port scanning:
 

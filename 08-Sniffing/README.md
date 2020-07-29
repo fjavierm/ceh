@@ -6,7 +6,7 @@ To be able to use sniffing techniques the promiscuous mode needs to be enabled i
 
 There are two types of sniffing techniques:
 
-* **Active sniffing**: Active sniffing is the sniffing type in which attackers have to send additional packets to the connected device such as a switch to start receiving packets. As it is known, a unicast packet from the switch is transmitted to a specific port only. Attackers use certain techniques such as _MAC Flooading_, _DHCP Attacks_, _DNS Poisoning_, _Sitch Port Stealing_, _ARP Poisoning_ and _Spoofing_ to monitor traffic passing through the switch.
+* **Active sniffing**: Active sniffing is the sniffing type in which attackers have to send additional packets to the connected device such as a switch to start receiving packets. As it is known, a unicast packet from the switch is transmitted to a specific port only. Attackers use certain techniques such as _MAC Flooding_, _DHCP Attacks_, _DNS Poisoning_, _Switch Port Stealing_, _ARP Poisoning_ and _Spoofing_ to monitor traffic passing through the switch.
 
 * **Passive sniffing**: Passive sniffing is the sniffing type in which there is no need of sending additional packets or interfering the device such as a hub to receive packages. As it is known, a hab broadcast every packet to its port, which helps the attacker to monitor all traffic passing through the hub without any effort.
 
@@ -26,11 +26,11 @@ Wiretapping can be classified into its own two types:
 
 * **Passive wiretapping**: This type, just, includes monitoring and recording a communication.
 
-When talking about active sniffing some techniques have been named to help attackers to generate traffic in a network and gather information. It is time to describe these techniques:
+When talking about active sniffing, some techniques that help attackers to generate traffic in a network and gather information have been named. It is time to describe these techniques:
 
-## MAC Attacks
+### MAC Attacks
 
- Stands for "Media Access Control Address and a MAC address is a hardware identification number that uniquely identifies each device on a network. The MAC address is manufactured into every network card, such as an Ethernet card or Wi-Fi card, and therefore cannot be changed.
+Stands for "Media Access Control Address and a MAC address is a hardware identification number that uniquely identifies each device on a network. The MAC address is manufactured into every network card, such as an Ethernet card or Wi-Fi card, and therefore cannot be changed.
 
 Because there are millions of networkable devices in existence, and each device needs to have a unique MAC address, there must be a very wide range of possible addresses. For this reason, MAC addresses are made up of six two-digit hexadecimal numbers, separated by colons. For example, an Ethernet card may have a MAC address of 00:0d:83:b1:c0:8e.
 
@@ -66,7 +66,7 @@ There are several ways to mitigate these packet sniffing attacks. The first of t
 
 An important fact to know is that port security capabilities are dependant on the platform meaning that different switch manufacturers have different capabilities.
 
-The second way to mitigate sniffing is through the use of static ARP entries. Static ARP entries are permanent entries that won’t time out from the ARP cache. This method does have a drawback though. Administrators have to create new entries on every host on the network every time a new host is connected, or when a network card is replaced.
+The second way to mitigate sniffing is through the use of static ARP entries. Static ARP entries are permanent entries that will not time out from the ARP cache. This method does have a drawback though. Administrators have to create new entries on every host on the network every time a new host is connected, or when a network card is replaced.
 
 The final method of defence is through detection. Intrusion detection systems can be configured to listen for high amounts of ARP traffic. There are also tools specifically designed to listen for ARP replies on networks. This method is prone to reporting false positives though. It should be remembered that detection is always an important step in mitigation.
 
@@ -78,7 +78,7 @@ Acronym of Dynamic Host Configuration Protocol. It is a network protocol used on
 
 In addition to the IP address, DHCP also assigns the subnet mask, a default gateway address, a domain name server (DNS) address and other pertinent configuration parameters. Request for Comments (RFC) 2131 and 2132 define DHCP as an Internet Engineering Task Force (IETF) - defined standard based on the BOOTP protocol.
 
-When working with DHCP, it’s important to understand all of the components.  Below is a list of them and what they do:
+When working with DHCP, it is important to understand all of the components. Below is a list of them and what they do:
 
 * **DHCP server**: A networked device running the DCHP service that holds IP addresses and related configuration information. This is most typically a server or a router but could be anything that acts as a host, such as an SD-WAN appliance.
 
@@ -228,7 +228,7 @@ A DNS zone transfer is just a copy of the DNS zone, and while this technique is 
 
 One of the things that can be done to prevent these kinds of tricks is to restrict which DNS servers are allowed to perform a zone transfer or at least limit the allowed IP addresses that can make such requests.
 
-That's why limiting zone transfers are one of the best ways to protect your precious DNS zone information.
+That is why limiting zone transfers are one of the best ways to protect your precious DNS zone information.
 
 ####  Disable DNS recursion to prevent DNS poisoning attacks
 
@@ -262,7 +262,7 @@ That is why the best thing you can do is to hire an anti-DDOS specialized servic
 
 #### Two-Factor Authentication
 
-If you are not running your own DNS servers and decide to use a third party DNS managed service like Cloudflare DNS or DNSMadeEasy, you can be sure their servers are pretty well secured.
+If you are not running your own DNS servers and decide to use a third-party DNS managed service like Cloudflare DNS or DNSMadeEasy, you can be sure their servers are pretty well secured.
 
 However, none (not even their CEO) is safe from getting an account compromise, but the probabilities are very low, to be honest.
 

@@ -36,7 +36,7 @@ Obviously, there are as many ways of doing this as attacker are out there trying
 
 * **Passive Attacks**: Passive attacks are the ones where attacker just stay around monitoring or sniffing the traffic in a network and they do not have interaction with the victim's machine.
 
-## Session HIjacking and the OSI Model
+## Session Hijacking and the OSI Model
 
 * **Network-level attacks**: This kind of attacks hijack network-level sessions as TCP and UDP session. 
 
@@ -128,7 +128,7 @@ RST hijacking involves injecting an authentic-looking reset (RST) packet using a
 
 RST Hijacking can be carried out using a packet crafting tool and TCP/IP analysis tool. 
 
-# Blind Hijacking
+### Blind Hijacking
 
 In this type of session hijacking, attackers do not see the target host's response to the transmitted requests. Attacker, being in a man-in-the-middle position, can only introduce malicious injections into the victim's data packets, blindly guessing their sequence numbers and without receiving confirmation of success. Nevertheless, blind hijacking can be used, for instance, to send a command to change/reset a password.
 
@@ -184,7 +184,7 @@ IPSec consists of two main protocols:
 
 #### Authentication Header
 
-In the Authentication Header (AH) protocol, IP headers and data payloads are hashed. From this hash, a new AH header is build which is appended to the packet. This new packet is transmitted via router where the router hashes the header and the payload. Both the hashes need to be exactly matched. Even a single bit is changed, the AH header will not match.
+In the Authentication Header (AH) protocol, IP headers and data payloads are hashed. From this hash, a new AH header is built which is appended to the packet. This new packet is transmitted via router where the router hashes the header and the payload. Both the hashes need to be exactly matched. Even a single bit is changed, the AH header will not match.
 
 #### Encapsulating Security Payload
 

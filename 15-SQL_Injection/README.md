@@ -110,7 +110,7 @@ Despite of the extra security offered by adding an IDS, there are som evasion te
 
 ### Countermeasures
 
-Inorder to prevent SQL injection, developers can utilise parameterized database queries with bound, typed parameters and careful use of parameterized stored procedures in the database.
+In order to prevent SQL injection, developers can utilise parameterized database queries with bound, typed parameters and careful use of parameterized stored procedures in the database.
 
 Additionally, developers, system administrators, and database administrators can take further steps to minimize attacks or the impact of successful attacks:
 

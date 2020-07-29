@@ -44,7 +44,7 @@ The features of available SNMP variants are:
 
 ## Brute Force Attack on Active Directory
 
-[Active Directory](https://en.wikipedia.org/wiki/Active_Directory) (AD) is a directory service developed by Microsoft for Windows domain networks. It is included in most Windows Server operating systems as a set of processes and services. Initially, Active Directory was only in charge of centralized domain management. Starting with Windows Server 2008, however, Active Directory became an umbrella title for a broad range of directory-based identity-related services. It authenticates and authorizes all users and computers in a Windows domain type network—assigning and enforcing security policies for all computers and installing or updating software
+[Active Directory](https://en.wikipedia.org/wiki/Active_Directory) (AD) is a directory service developed by Microsoft for Windows domain networks. It is included in most Windows Server operating systems as a set of processes and services. Initially, Active Directory was only in charge of centralized domain management. Starting with Windows Server 2008, however, Active Directory became an umbrella title for a broad range of directory-based identity-related services. It authenticates and authorizes all users and computers in a Windows domain type network—assigning and enforcing security policies for all computers and installing or updating software.
 
 Targeting an active directory server can give the attackers access to usernames, addresses, credentials, privileged information, etc.
 
@@ -129,7 +129,7 @@ SMTP has multiple commands to make possible communication between users. By insp
 
 * HELO: To identify the domain name of the server.
 * EXPN: Verify Mailbox on localhost.
-* MAIL FROM: To identify the sender of the email
+* MAIL FROM: To identify the sender of the email.
 * RCPT TO: Specify the message recipients.
 * SIZE: To specify maximum supported size information.
 * DATA: To define data.
@@ -157,12 +157,12 @@ If found, a Samba server can give attackers extensive access to a hard drive in 
 ### SNMP
 
 * Configure additional restrictions for anonymous connections.
-* Upgrade SNMP fo SNMPv3.
+* Upgrade SNMP to SNMPv3.
 * Change default community string.
 
 ### DNS (Zone Transfer)
 
-* Avoid publishing private addresses information in the zone files
+* Avoid publishing private addresses information in the zone files.
 * Disable zone transfer for untrusted hosts.
 * Hide sensitive information from the public.
 
@@ -182,14 +182,14 @@ If found, a Samba server can give attackers extensive access to a hard drive in 
  
 ### NetBIOS
 
-* Disable SMB (if not needed)
-* Disable NetBIOS
-* Use a network firewall
-* Use a software firewall
-* Disable sharing
+* Disable SMB (if not needed).
+* Disable NetBIOS.
+* Use a network firewall.
+* Use a software firewall.
+* Disable sharing.
 
 ### NTP
 
-* Configure MD5 layer
-* Configure NTP authentication
-* Upgrade NTP version
+* Configure MD5 layer.
+* Configure NTP authentication.
+* Upgrade NTP version.

@@ -74,13 +74,13 @@ They use 802.11 networking standards, which come in several flavours:
 
 * 802.11a transmits at 5 GHz and can move up to 54 megabits of data per second. It also uses orthogonal frequency-division multiplexing (OFDM), a more efficient coding technique that splits that radio signal into several sub-signals before they reach a receiver. This greatly reduces interference.
 
-* 802.11b is the slowest and least expensive standard. For a while, its cost made it popular, but now it's becoming less common as faster standards become less expensive. 802.11b transmits in the 2.4 GHz frequency band of the radio spectrum. It can handle up to 11 megabits of data per second, and it uses complementary code keying (CCK) modulation to improve speeds.
+* 802.11b is the slowest and least expensive standard. For a while, its cost made it popular, but now it is becoming less common as faster standards become less expensive. 802.11b transmits in the 2.4 GHz frequency band of the radio spectrum. It can handle up to 11 megabits of data per second, and it uses complementary code keying (CCK) modulation to improve speeds.
 
-* 802.11g transmits at 2.4 GHz like 802.11b, but it's a lot faster -- it can handle up to 54 megabits of data per second. 802.11g is faster because it uses the same OFDM coding as 802.11a.
+* 802.11g transmits at 2.4 GHz like 802.11b, but it is a lot faster - it can handle up to 54 megabits of data per second. 802.11g is faster because it uses the same OFDM coding as 802.11a.
 
 * 802.11n is the most widely available of the standards and is backwards compatible with a, b and g. It significantly improved speed and range over its predecessors. For instance, although 802.11g theoretically moves 54 megabits of data per second, it only achieves real-world speeds of about 24 megabits of data per second because of network congestion. 802.11n, however, reportedly can achieve speeds as high as 140 megabits per second. 802.11n can transmit up to four streams of data, each at a maximum of 150 megabits per second, but most routers only allow for two or three streams.
 
-* 802.11ac is the newest standard as of early 2013. It has yet to be widely adopted, and is still in draft form at the Institute of Electrical and Electronics Engineers (IEEE), but devices that support it are already on the market. 802.11ac is backwards compatible with 802.11n (and therefore the others, too), with n on the 2.4 GHz band and ac on the 5 GHz band. It is less prone to interference and far faster than its predecessors, pushing a maximum of 450 megabits per second on a single stream, although real-world speeds may be lower. Like 802.11n, it allows for transmission on multiple spatial streams -- up to eight, optionally. It is sometimes called 5G WiFi because of its frequency band, sometimes Gigabit WiFi because of its potential to exceed a gigabit per second on multiple streams and sometimes Very High Throughput (VHT) for the same reason.
+* 802.11ac is the newest standard as of early 2013. It has yet to be widely adopted, and is still in draft form at the Institute of Electrical and Electronics Engineers (IEEE), but devices that support it are already on the market. 802.11ac is backwards compatible with 802.11n (and therefore the others, too), with n on the 2.4 GHz band and ac on the 5 GHz band. It is less prone to interference and far faster than its predecessors, pushing a maximum of 450 megabits per second on a single stream, although real-world speeds may be lower. Like 802.11n, it allows for transmission on multiple spatial streams - up to eight, optionally. It is sometimes called 5G WiFi because of its frequency band, sometimes Gigabit WiFi because of its potential to exceed a gigabit per second on multiple streams and sometimes Very High Throughput (VHT) for the same reason.
 
 ### Wi-Fi Authentication Modes
 
@@ -183,7 +183,7 @@ WPA2 replaced WPA. Certification began in September, 2004 and from March 13, 200
 
 ## Wireless Threats
 
-* **Access control attack** Attackers obtaining access to a non-authorised network.
+* **Access control attack**: Attackers obtaining access to a non-authorised network.
 
 * **Integrity and confidentiality attacks**: Attacker intercept confidential information going through the network.
 
@@ -264,7 +264,7 @@ In addition, SANS has a whitepaper with the tittle:
 
  ## Countermeasures
 
- Multiple techniques and practices can be tacking to prevent attacks on wireless networks, some of them already discussed previously such as using monitoring and auditing tools, configuring strict access control policies, following best practices and techniques and, using appropriate encryption like WPA2 and strong authentication. Some of these basic techniques are:
+Multiple techniques and practices can be tacking to prevent attacks on wireless networks, some of them already discussed previously such as using monitoring and auditing tools, configuring strict access control policies, following best practices and techniques and, using appropriate encryption like WPA2 and strong authentication. Some of these basic techniques are:
 
  * Access point scanning
  * Change default parameters

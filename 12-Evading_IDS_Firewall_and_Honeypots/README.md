@@ -42,9 +42,9 @@ Being aware of the techniques available to cybercriminals who are trying to brea
 
 * **Avoiding defaults**: A port utilized by a protocol does not always provide an indication to the protocol that’s being transported. If an attacker had reconfigured it to use a different port, the IDS may not be able to detect the presence of a trojan.
 
-* **Coordinated, low-bandwidth attacks**: coordinating a scan among numerous attackers, or even allocating various ports or hosts to different attackers. This makes it difficult for the IDS to correlate the captured packets and deduce that a network scan is in progress.
+* **Coordinated, low-bandwidth attacks**: Coordinating a scan among numerous attackers, or even allocating various ports or hosts to different attackers. This makes it difficult for the IDS to correlate the captured packets and deduce that a network scan is in progress.
 
-* **Address spoofing/proxying**: attackers can obscure the source of the attack by using poorly secured or incorrectly configured proxy servers to bounce an attack. If the source is spoofed and bounced by a server, it makes it very difficult to detect.
+* **Address spoofing/proxying**: Attackers can obscure the source of the attack by using poorly secured or incorrectly configured proxy servers to bounce an attack. If the source is spoofed and bounced by a server, it makes it very difficult to detect.
 
 * **Pattern change evasion**: IDS rely on pattern matching to detect attacks. By making slight adjustments to the attack architecture, detection can be avoided.
 
@@ -90,7 +90,7 @@ Intrusion prevention systems can be organized into four major types:
 
 The majority of intrusion prevention systems use one of three detection methods: signature-based, statistical anomaly-based, and stateful protocol analysis.
 
-* **Signature-based detection**: Signature-based IDS monitors packets in the network and compares with predetermined attack patterns, known as “signatures”.
+* **Signature-based detection**: Signature-based IDS monitors packets in the network and compares with predetermined attack patterns, known as "signatures".
 
 * **Statistical anomaly-based detection**: An anomaly-based IDS will monitor network traffic and compare it to expected traffic patterns. The baseline will identify what is "normal" for that network – what sort of packets generally through the network and what protocols are used. It may however, raise a false positive alarm for the legitimate use of bandwidth if the baselines are not intelligently configured.
 
@@ -117,7 +117,7 @@ Many IPS can also respond to a detected threat by actively preventing it from su
 | Positioning | In-line in the network. Every packet goes through it. | Not-inline with the network. It receives a copy of every packet. |
 | Mode | In-line/Tap | Promiscuous |
 | Delay | Introduces delay because every packet is analysed before forwarded to a destination. | Does not introduce delay because it is not in-line within the network. |
-| Point of failure? | Yes, depending on the configuration. Fail-open or fail-close will drop or not all the traffic.,  | No impact on traffic as is not in-line with the network. |
+| Point of failure? | Yes, depending on the configuration. Fail-open or fail-close will drop or not all the traffic. | No impact on traffic as is not in-line with the network. |
 | Ability to mitigate an attack? | Yes, ability to drop malicious traffic unless in 'Tap mode'. | Not directly but, it can help other in-line solutions. |
 | Can do packet manipulation? | Yes. It can modify traffic based on defined rules. | No. Just receives mirrored traffic. |
 
@@ -138,7 +138,7 @@ Many IPS can also respond to a detected threat by actively preventing it from su
 
 * **Connection Analysis**: Tries to analyse all network connections and tries to differentiate between legitimate and unauthorised traffic.
 
-* **Kernel LEvel Detection**: The OS kernel itself tries to detect alteration on the system binaries and, in case of anomalies, raises the intrusion attempt.
+* **Kernel Level Detection**: The OS kernel itself tries to detect alteration on the system binaries and, in case of anomalies, raises the intrusion attempt.
 
 ## Firewalls
 
@@ -168,7 +168,7 @@ Firewalls are relied upon to secure home and corporate networks. A simple firewa
 
 * **Proxy Server**: This version will check all messages that enter or leave a network, and then hide the real network addresses from any external inspection.
 
-* **Next-Generation (NGFW)**: These work by filtering traffic moving through a network – the filtering is determined by the applications or traffic types and the ports they are assigned to. These features comprise a blend of a standard firewall with additional functionality, to help with greater, more self-sufficient network inspection.
+* **Next-Generation (NGFW)**: These work by filtering traffic moving through a network - the filtering is determined by the applications or traffic types and the ports they are assigned to. These features comprise a blend of a standard firewall with additional functionality, to help with greater, more self-sufficient network inspection.
 
 * **Stateful Firewalls**: Sometimes referred to as third-generation firewall technology, stateful filtering accomplishes two things: traffic classification based on the destination port, and packet tracking of every interaction between internal connections. These newer technologies increase usability and assist in expanding access control granularity – interactions are no longer defined by port and protocol. A packet’s history in the state table is also measured.
 
@@ -186,7 +186,7 @@ Cloud Firewalls are software-based, cloud-deployed network devices, built to sto
 
 * **Extensibility**: Cloud firewalls can be reached and installed anywhere an organization can provide a protected network communication path. With an on-premises device, this extensibility is limited by the available resources of the organization looking for a firewall solution.
 
-* **Migration Security**: A cloud firewall is capable of filtering traffic from a variety of sources; the internet, between virtual networks, between tenants, or even a virtual data centre. It’s capable of guaranteeing the security of connections made between physical data centres and the cloud – this is very beneficial for organizations looking for a means of migrating current solutions from an on-prem location to a cloud-based infrastructure.
+* **Migration Security**: A cloud firewall is capable of filtering traffic from a variety of sources; the internet, between virtual networks, between tenants, or even a virtual data centre. It is capable of guaranteeing the security of connections made between physical data centres and the cloud – this is very beneficial for organizations looking for a means of migrating current solutions from an on-prem location to a cloud-based infrastructure.
 
 * **Secure Access Parity**: Cloud firewalls provide the same level of secure access as on-prem firewalls. This means advanced access policy, connection management, and filtering between clients and the cloud. This also extends to encrypted content.
 
@@ -310,7 +310,7 @@ Similarly, overlapping fragments can be sent configuring their TCP sequence as o
 
 ### Denial-of-Service
 
-Passive IDSs devices are configured ad '_Fail-Open_'. Taking advantage of this limitation, attackers can run a DoS attack to overload an IDS system. They can target the CPU or memory by sending specially crafted packets or a large number of fragmented out-of-order packets.
+Passive IDSs devices are configured as '_Fail-Open_'. Taking advantage of this limitation, attackers can run a DoS attack to overload an IDS system. They can target the CPU or memory by sending specially crafted packets or a large number of fragmented out-of-order packets.
 
 ### Obfuscation
 
@@ -332,7 +332,7 @@ The identification of firewalls includes firewall fingerprinting to obtain sensi
 
 * ***Port Scanning**: Special packets can be sent to particular hosts to analyse the responses and infer information about the environment, specially open ports.
 
-* **Fire-walking**: Is a technique that using ICMP packets finds out the location of the firewall and allows to map a network by probing the ICMP echo request with TTL values exceeding one by one. It helps to find the number of hoops.
+* **Fire-walking**: It is a technique that using ICMP packets finds out the location of the firewall and allows to map a network by probing the ICMP echo request with TTL values exceeding one by one. It helps to find the number of hoops.
 
 * **Banner Grabbing**: The different devices that can be found in a network display different banner, vendor information, that can be identified and device and firmware can be extracted.
 

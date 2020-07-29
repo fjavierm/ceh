@@ -1,4 +1,4 @@
-# Denial of Services
+# Denial of Service
 
 Denial of Service (DoS) and Distributed Denial of Service (DDoS) are very common attacks nowadays.
 
@@ -66,9 +66,9 @@ The client/server model mimics the traditional remote workstation workflow where
 
 A number of popular centralized botnet topologies have been observed, including:
 
-* Star Network Topology.
-* Multi-Server Network Topology.
-* Hierarchical Network Topology.
+* Star Network Topology
+* Multi-Server Network Topology
+* Hierarchical Network Topology
 
 ### The peer-to-peer botnet model
 

@@ -6,7 +6,7 @@ For all these reasons, these mobile devices must have strong security and not ju
 
 ## Mobile Platform Attack Vectors
 
-The OWAS project publishes an unbiased and practical list of the top 10 most common attacks on mobile platforms:
+The OWASP project publishes an unbiased and practical list of the top 10 most common attacks on mobile platforms:
 
 | Top 10 (2016) | Top 10 (2014) |
 |:-|:-|
@@ -156,9 +156,7 @@ Traditionally, BlackBerry applications are written using Java, particularly the 
 
 * **Malicious code signing**: It the process where attacker after obtaining a code-signing key from the code-signing service sign a malicious application and uploads it to the BlackBerry App Store to be distributed to users.
 
-* **JAD file exploit**: 
-
-JAD stands for Java Application Descriptor file. Files with the _.jad_ extension are descriptor files that are commonly used to describe the contents of a MIDlet that are created for the Java ME virtual machine. Attackers can trick users to install malicious _.jad_ files pointing to malicious download links to obtain an application or, even, they can be crafted to run DoS attacks.
+* **JAD file exploit**: JAD stands for Java Application Descriptor file. Files with the _.jad_ extension are descriptor files that are commonly used to describe the contents of a MIDlet that are created for the Java ME virtual machine. Attackers can trick users to install malicious _.jad_ files pointing to malicious download links to obtain an application or, even, they can be crafted to run DoS attacks.
 
 ## Mobile Device Management (MDM)
 

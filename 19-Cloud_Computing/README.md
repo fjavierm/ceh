@@ -77,7 +77,7 @@ The NIST cloud computing reference architecture defines five major actors: cloud
 
 | Actor | Definition |
 |:-|:-|
-| Cloud Consumer | A person or organization that maintains a business relationship with, and uses service from, Cloud Providers
+| Cloud Consumer | A person or organization that maintains a business relationship with, and uses service from, Cloud Providers |
 | Cloud Provider | A person, organization, or entity responsible for making a service available to interested parties |
 | Cloud Auditor | A party that can conduct an independent assessment of cloud services, information system operations, performance and security of the cloud implementation |
 | Cloud Broker | An entity that manages the use, performance and delivery of cloud services, and negotiates relationships between Cloud Providers and Cloud Consumers |
@@ -125,7 +125,7 @@ VMs have the following characteristics, which offer several benefits.
 
 ### Types of Virtualization
 
-* **Server Virtualization**: Server virtualization enables multiple operating systems to run on a single physical server as highly efficient virtual machines
+* **Server Virtualization**: Server virtualization enables multiple operating systems to run on a single physical server as highly efficient virtual machines.
 
 * **Network Virtualization**: By completely reproducing a physical network, network virtualization allows applications to run on a virtual network as if they were running on a physical network — but with greater operational benefits and all the hardware independencies of virtualization.
 
@@ -174,11 +174,11 @@ A side-channel attack is arranged by hackers when they place a malicious virtual
 
 ### Wrapping attacks
 
-A wrapping attack is an example of a man-in-the-middle attack in the cloud environment. Cloud computing is vulnerable to wrapping attacks because cloud users typically connect to services via a web browser. An XML signature is used to protect users' credentials from unauthorized access, but this signature doesn't secure the positions in the document. Thus, XML signature element wrapping allows attackers to manipulate an XML document.
+A wrapping attack is an example of a man-in-the-middle attack in the cloud environment. Cloud computing is vulnerable to wrapping attacks because cloud users typically connect to services via a web browser. An XML signature is used to protect users' credentials from unauthorized access, but this signature does not secure the positions in the document. Thus, XML signature element wrapping allows attackers to manipulate an XML document.
 
 For example, a vulnerability was found in the SOAP interface of Amazon Elastic Cloud Computing (EC2) in 2009. This weakness allowed attackers to modify an eavesdropped message as a result of a successful signature wrapping attack.
 
-###  Man-in-the-cloud attacks
+### Man-in-the-cloud attacks
 
 During this type of attack, hackers intercept and reconfigure cloud services by exploiting vulnerabilities in the synchronization token system so that during the next synchronization with the cloud, the synchronization token will be replaced with a new one that provides access to the attackers. Users may never know that their accounts have been hacked, as an attacker can put back the original synchronization tokens at any time. Moreover, there's a risk that compromised accounts will never be recovered.
 

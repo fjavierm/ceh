@@ -43,7 +43,7 @@ The last version of the [OWASP top 10](https://owasp.org/www-pdf-archive/OWASP-I
 
 * **Weak, Guessable, or Hardcoded Passwords**: Use of easily brute-forced, publicly available, or unchangeable credentials, including backdoors in firmware or client software that grants unauthorized access to deployed systems.
 
-* **Insecure Network Services**: Unneeded or insecure network services running on the device itself, especially those exposed to the internet, that compromise the confidentiality, integrity/authenticity, or availability of information or allow unauthorized remote control...
+* **Insecure Network Services**: Unneeded or insecure network services running on the device itself, especially those exposed to the internet, that compromise the confidentiality, integrity/authenticity, or availability of information or allow unauthorized remote control.
 
 * **Insecure Ecosystem Interfaces**: Insecure web, backend API, cloud, or mobile interfaces in the ecosystem outside of the device that allows compromise of the device or its related components. Common issues include a lack of authentication/authorization, lacking or weak encryption, and a lack of input and output filtering.
     
@@ -130,6 +130,6 @@ Countermeasures include:
 * Use encryption in drivers
 * User account lockout
 * Periodic assessment of devices
-* secure password recovery
+* Secure password recovery
 * Two-factor authentication
 * Disable UPnP

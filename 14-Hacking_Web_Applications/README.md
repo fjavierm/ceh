@@ -60,7 +60,7 @@ Multiple different threats apply to web applications:
 
 * **Broken session management**: Weakness of the session management systems like:
 
-    * User authentication credentials are not protected when stored..
+    * User authentication credentials are not protected when stored.
     * Predictable login credentials.
     * Session IDs are exposed in the URL.
     * Session IDs are vulnerable to session fixation attacks.
